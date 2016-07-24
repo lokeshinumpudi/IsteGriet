@@ -3,13 +3,16 @@
 
 <head>
 
-
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="" href="libsmin/semantic.min.css">
     <link rel="" type="" href="">
 
     <style>
         /*fonts*/
-        /*@font-face {
+        .main-menu{
+            padding-bottom:24px;
+        }
+        @font-face {
             font-family: 'icomoon';
             src: url('fonts/icomoon.eot?y2cx5o');
             src: url('fonts/icomoon.eot?y2cx5o#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?y2cx5o') format('truetype'), url('fonts/icomoon.woff?y2cx5o') format('woff'), url('fonts/icomoon.svg?y2cx5o#icomoon') format('svg');
@@ -17,8 +20,8 @@
             font-style: normal;
         }
         
-        i {
-             use !important to prevent issues with browser extensions that change fonts 
+        .icon-facebook {
+            /*use !important to prevent issues with browser extensions that change fonts */
             font-family: 'icomoon' !important;
             speak: none;
             font-style: normal;
@@ -26,14 +29,13 @@
             font-variant: normal;
             text-transform: none;
             line-height: 1;
-             Better Font Rendering =========== 
-            -webkit-font-smoothing: antialiased;
+            Better Font Rendering===========-webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         
         .icon-facebook-official:before {
             content: "\e900";
-        }*/
+        }
         /*fonts end*/
         
         .center {
@@ -59,7 +61,7 @@
         }
         /*upto tabs*/
         
-        @media only screen and (max-width: 900px) {
+        @media screen and (max-width: 900px) {
             .width-control {
                 padding: 0 15%;
             }
@@ -68,7 +70,7 @@
             }
             .homeImage {
                 height: 290px !important;
-                left: -14px !important;
+                left: -20px !important;
                 width: 110% !important;
                 background-size: contain !important;
                 background-repeat: no-repeat;
@@ -100,7 +102,7 @@
         /*ultra small*/
         /*small mobile devices*/
         
-        @media only screen and (max-width: 418px) {
+        @media screen and (max-width: 418px) {
             .width-control {
                 padding: 0 4%;
             }
@@ -357,46 +359,51 @@
 <body ng-controller="bodyCtrl as bodyvm">
     <!--menu bar-->
     <!--top menu start-->
-    <div class="ui secondary  menu">
-        <a href="#/">
-            <li class="item" ng-class="{'active':bodyvm.activetab == 'home'}">Home</li>
-        </a>
 
-        <a href="#/events">
-            <li class="item" ng-class="{'active':bodyvm.activetab =='events'}">Events</li>
-        </a>
-        <a href="#/mela">
-            <li class="item" ng-class="{'active':bodyvm.activetab =='mela'}">Mela</li>
-        </a>
+    <div class="ui fluid container main-menu">
 
-        <a href="#/team">
-            <li class="item" ng-class="{'active':bodyvm.activetab =='team'}">Team</li>
-        </a>
-        <a href="#/about">
-            <li class="item" ng-class="{'active':bodyvm.activetab =='about'}">About</li>
-        </a>
-        <a href="#/contact">
-            <li class="item" ng-class="{'active':bodyvm.activetab =='contactUs'}">Contact Us</li>
-        </a>
+        <div class="ui secondary  menu">
+            <a href="#/">
+                <li class="item" ng-class="{'active':bodyvm.activetab == 'home'}">Home</li>
+            </a>
 
-        <div class="right menu">
+            <a href="#/events">
+                <li class="item" ng-class="{'active':bodyvm.activetab =='events'}">Events</li>
+            </a>
+            <a href="#/mela">
+                <li class="item" ng-class="{'active':bodyvm.activetab =='mela'}">Mela</li>
+            </a>
+
+            <a href="#/team">
+                <li class="item" ng-class="{'active':bodyvm.activetab =='team'}">Team</li>
+            </a>
+            <a href="#/about">
+                <li class="item" ng-class="{'active':bodyvm.activetab =='about'}">About</li>
+            </a>
+            <a href="#/contact">
+                <li class="item" ng-class="{'active':bodyvm.activetab =='contactUs'}">Contact Us</li>
+            </a>
+
+            <!--<div class="right menu">
             <div class="item">
                 <div class="ui icon input">
                     <input type="text" placeholder="Search Events">
                     <i class="search link icon"></i>
                 </div>
             </div>
-            <!--<a class="ui item">
-      Logout
-    </a>-->
-        </div>
+         
+        </div>-->
 
+        </div>
     </div>
+
 
     <!--top menu end-->
 
+    <div class="ui fluid container">
+        <ng-view></ng-view>
+    </div>
 
-    <ng-view></ng-view>
 
 
 
