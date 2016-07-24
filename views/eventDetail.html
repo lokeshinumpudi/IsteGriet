@@ -1,0 +1,97 @@
+<div class="ui container">
+
+    <div class="ui segment">
+        <!--left rail-->
+        <!--
+        <div class="ui left internal attached rail">
+            <div class="ui segment center">
+                <a href="#/events">Events</a>
+            </div>
+
+
+        </div>
+
+        <div class="ui right internal attached rail">
+            <div class="ui segment center">
+                Next event
+            </div>
+        </div>-->
+        <a href="" class="ui red ribbon label">Jan 5 2016</a>
+
+        <h2 class="ui header center">
+           {{eventDetail.event.title}}
+        </h2>
+        <div class="ui stackable  grid">
+            <div class=" twelve wide column">
+
+                <render-description sourcedata="eventDetail.event" iseventspage="false">
+
+                </render-description>
+
+
+            </div>
+            <div class="four wide column">
+
+                <div class="notification">
+
+                    <!--this will be the notification dates-->
+                    <div class="ui header">
+
+
+                        <div class="ui list">
+                            <div class="ui header center">
+                                <strong>Think of a title noob</strong>
+                            </div>
+
+                            <div class="ui  divider ">
+
+                            </div>
+                            <h4 class="center">Registration</h4>
+                            <div class="ui item">
+                                <div class="ui blue basic label"> Room no:</div>
+                                <small>201</small>
+                            </div>
+
+                            <div class="ui item">
+                                <div class="ui blue basic label"> Timings:</div>
+                                <small>10 A.M -</small>
+                                <small>4 P.M </small>
+                            </div>
+
+                            <!--seats-->
+                            <div class="ui item">
+                                <div class="ui blue basic label"> Seats Available:</div>
+                                <small>50</small>
+                            </div>
+                            <div class="ui item">
+                                <div class="ui blue basic label">Contact:</div>
+                                <small>Rahul- 0000000004</small>
+                            </div>
+
+                            <div class="ui divider"></div>
+                            <!--seats end-->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="ui divider horizontal header">
+                <a href="">Gallery</a>
+            </div>
+
+            <div class="ui medium images gallery-eventDetail">
+                <img ng-repeat="imagesrc in eventDetail.event.gallery" ng-src="{{eventDetail.event.imagedirectory}}{{imagesrc}}" alt="">
+            </div>
+
+        </div>
+
+    </div>
