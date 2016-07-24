@@ -9,7 +9,9 @@
 
     <style>
         /*fonts*/
-        
+        .main-menu{
+            padding-bottom:24px;
+        }
         @font-face {
             font-family: 'icomoon';
             src: url('fonts/icomoon.eot?y2cx5o');
@@ -358,7 +360,7 @@
     <!--menu bar-->
     <!--top menu start-->
 
-    <div class="ui fluid container  ">
+    <div class="ui fluid container main-menu">
 
         <div class="ui secondary  menu">
             <a href="#/">
@@ -379,8 +381,8 @@
                 <li class="item" ng-class="{'active':bodyvm.activetab =='about'}">About</li>
             </a>
             <a href="#/contact">
-            <li class="item" ng-class="{'active':bodyvm.activetab =='contactUs'}">Contact Us</li>
-        </a>
+                <li class="item" ng-class="{'active':bodyvm.activetab =='contactUs'}">Contact Us</li>
+            </a>
 
             <!--<div class="right menu">
             <div class="item">
