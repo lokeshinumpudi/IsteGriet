@@ -54,7 +54,7 @@
 
     <!--top menu end-->
 
-    <div class="ui fluid container">
+    <div class="ui  container">
         <ng-view></ng-view>
     </div>
 

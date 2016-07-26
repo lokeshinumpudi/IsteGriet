@@ -45,13 +45,15 @@
  .width-control {
      padding: 0 20%;
  }
+ 
  .content-description {
-     padding: 7%;
+     padding: 6%;
  }
  
- .content-description p{
+ .content-description p {
      line-height: 1.8em !important;
  }
+ 
  .width-control-more-events {
      padding: 0 20%;
      top: 35px;
@@ -105,8 +107,8 @@
          padding: 0 4%;
      }
      .content-description {
-     padding: 1%;
- }
+         padding: 1%;
+     }
      .move-25-right {
          left: 11% !important;
          padding-top: 50px;
@@ -279,8 +281,6 @@
  }
  /*events end*/
  /*Detail view*/
- 
- 
  
  .notification {
      padding: 4%;
