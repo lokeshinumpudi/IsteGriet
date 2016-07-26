@@ -104,6 +104,9 @@
      .width-control {
          padding: 0 4%;
      }
+     .content-description {
+     padding: 1%;
+ }
      .move-25-right {
          left: 11% !important;
          padding-top: 50px;
@@ -277,9 +280,7 @@
  /*events end*/
  /*Detail view*/
  
- .content-description {
-     padding: 1%;
- }
+ 
  
  .notification {
      padding: 4%;
