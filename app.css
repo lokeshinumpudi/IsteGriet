@@ -45,7 +45,13 @@
  .width-control {
      padding: 0 20%;
  }
+ .content-description {
+     padding: 7%;
+ }
  
+ .content-description p{
+     line-height: 1.8em !important;
+ }
  .width-control-more-events {
      padding: 0 20%;
      top: 35px;
