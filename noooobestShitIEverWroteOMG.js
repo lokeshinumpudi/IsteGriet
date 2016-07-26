@@ -21,7 +21,6 @@ function findEndIndexes(text, word) {
         // check the word matched has white space before and after
         // so we select only the word we wanted to find occurence
         //presence of special chars is acceptable
-
         if (acceptableChars.indexOf(description[start - 1]) != -1
             && acceptableChars.indexOf(description[start + word.length]) != -1) {
             // now we have a perfect word 
@@ -41,32 +40,32 @@ function findEndIndexes(text, word) {
 // var endindexes = findEndIndexes(description, bold);
 // console.log(endindexes);
 var splitarrays = [];
-// for (var i = 0; i < endindexes.length; i++) {
-//     var start, end;
-//     var text = "";
-//     // A littel logic to extract text from a sentence given an array of indexes
-//     if (i == 0) {
-//         // start of index so include from begining of text
-//         start = 0;
-//         end = endindexes[i];
-//     } else if (i == endindexes.length - 1) {
-//         // end of indexes so fetch the remaining last text
-//         start = endindexes[i];
-//         end = description.length;
-//     }
-//     else {
-//         // start from a index+1 so we dont include the endIndexes letter[cause it belongs to other para]
-//         start = endindexes[i - 1] + 1;
-//         end = endindexes[i];
-//     }
+for (var i = 0; i < endindexes.length; i++) {
+    var start, end;
+    var text = "";
+    // A littel logic to extract text from a sentence given an array of indexes
+    if (i == 0) {
+        // start of index so include from begining of text
+        start = 0;
+        end = endindexes[i];
+    } else if (i == endindexes.length - 1) {
+        // end of indexes so fetch the remaining last text
+        start = endindexes[i];
+        end = description.length;
+    }
+    else {
+        // start from a index+1 so we dont include the endIndexes letter[cause it belongs to other para]
+        start = endindexes[i - 1] + 1;
+        end = endindexes[i];
+    }
 
-//     // simply loop over start/end and fetch text
-//     for (var j = start; j < end; j++) {
-//         text += description[j];
-//     }
+    // simply loop over start/end and fetch text
+    for (var j = start; j < end; j++) {
+        text += description[j];
+    }
 
-//     splitarrays.push(text);
-// }//for endindexes
+    splitarrays.push(text);
+}//for endindexes
 
 // console.log(splitarrays);
 
