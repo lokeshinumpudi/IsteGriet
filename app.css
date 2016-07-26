@@ -4,6 +4,10 @@
      padding-bottom: 24px;
  }
  
+ .hint-search{
+     cursor: pointer;
+     color: magenta;
+ }
  @font-face {
      font-family: 'icomoon';
      src: url('fonts/icomoon.eot?y2cx5o');

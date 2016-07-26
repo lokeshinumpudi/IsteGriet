@@ -9,6 +9,9 @@
     function eventsCtrl($route, $scope, $window, $rootScope, isteData) {
         // controllerAs scope
         var eventsVm = this;
+        // defaults
+        eventsVm.noresults = false;
+        // eventsVm.event_search = "";
 
         // get event data from the service
         eventsVm["center_event"] = isteData.centerEvent;
@@ -23,9 +26,14 @@
 
         }
 
-    
+
         $rootScope["events"] = allevents;
         $rootScope["events"].push(eventsVm["center_event"]);
+
+        // hint change of search text
+        eventsVm.hintClick = function ($event) {
+            eventsVm.event_search = "Digital Marketing";
+        }
 
         eventsVm.search_loading = false;
         // search functionality implementation
@@ -42,9 +50,20 @@
                 var currentevent = allevents[i];
                 var doesSearchMatch = regexp.exec(currentevent.title) || regexp.exec(currentevent.description) || regexp.exec(currentevent.year) || regexp.exec(currentevent.month) || regexp.exec(currentevent.registrationDetails.room_no) || regexp.exec(currentevent.registrationDetails.contact_no);
                 if (doesSearchMatch != null) {
+
                     search_match.push(currentevent);
                 }
             }//search test
+            // console.log(search_match);
+            //notify when search not found
+
+            if (search_match.length == 0) {
+                eventsVm.noresults = true;
+
+            } else {
+                eventsVm.noresults = false;
+            }
+            console.log(eventsVm.noresults);
             eventsVm["allevents"] = search_match;
             //remove loading after we find the results
             eventsVm.search_loading = false;

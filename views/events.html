@@ -23,7 +23,7 @@
                                 <!--<p>{{events.center_event.description}}</p>-->
 
                                 <render-description sourcedata="events.center_event" iseventspage="true"></render-description>
-                               
+
                                 <a class="ui button" ng-href="{{events.center_event.event_link}}" type=""> Read more!</a>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
     <div class="ui  segment">
         <div class="ui items">
 
-
+            
             <div ng-repeat="each_event in events.allevents track by $index" class="ui item each-event">
                 <div class="ui medium image">
                     <img ng-src="{{each_event.imagedirectory}}{{each_event.title_img_src}}" alt="">
@@ -98,6 +98,15 @@
                     </div>
                 </div>
             </div>
+
+            <div ng-show="events.noresults" class="ui item each-event">
+                <div class="content">
+                    <div class="header">
+                        Sorry no results found ! Try <span class="hint-search" ng-click="events.hintClick($event)">Digital Marketing</span>
+                    </div>
+                </div>
+                 
+                 </div>
             <!--ng-repeat-->
             <!--rest of the events-->
         </div>
