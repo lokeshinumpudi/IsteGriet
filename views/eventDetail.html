@@ -16,7 +16,7 @@
                 Next event
             </div>
         </div>-->
-        <a href="" class="ui red ribbon label">Jan 5 2016</a>
+        <a href="" class="ui red ribbon label"> {{eventDetail.event.month}} {{eventDetail.event.day}} {{eventDetail.event.year}}</a>
 
         <h2 class="ui header center">
            {{eventDetail.event.title}}
@@ -40,32 +40,32 @@
 
                         <div class="ui list">
                             <div class="ui header center">
-                                <strong>Think of a title noob</strong>
+                                <strong>Registration Details</strong>
                             </div>
 
                             <div class="ui  divider ">
 
                             </div>
-                            <h4 class="center">Registration</h4>
-                            <div class="ui item">
+                            <h4 class="center"></h4>
+                            <div class="ui item" ng-show="eventDetail.event.registrationDetails.room_no">
                                 <div class="ui blue basic label"> Room no:</div>
-                                <small>201</small>
+                                <small>{{eventDetail.event.registrationDetails.room_no}}</small>
                             </div>
 
-                            <div class="ui item">
+                            <div class="ui item" ng-show="eventDetail.event.registrationDetails.timings">
                                 <div class="ui blue basic label"> Timings:</div>
-                                <small>10 A.M -</small>
-                                <small>4 P.M </small>
+                                <small>{{eventDetail.event.registrationDetails.timings}}</small>
+
                             </div>
 
                             <!--seats-->
-                            <div class="ui item">
+                            <div class="ui item" ng-show="eventDetail.event.registrationDetails.seats_available">
                                 <div class="ui blue basic label"> Seats Available:</div>
-                                <small>50</small>
+                                <small>{{eventDetail.event.registrationDetails.seats_available}}</small>
                             </div>
-                            <div class="ui item">
+                            <div class="ui item" ng-show="eventDetail.event.registrationDetails.contact_no">
                                 <div class="ui blue basic label">Contact:</div>
-                                <small>Rahul- 0000000004</small>
+                                <small> {{eventDetail.event.registrationDetails.contact_no}}</small>
                             </div>
 
                             <div class="ui divider"></div>

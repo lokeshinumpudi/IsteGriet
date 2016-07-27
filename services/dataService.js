@@ -8,10 +8,31 @@
     isteData.$inject = [];
     function isteData() {
 
+        var monthToNum = {
+            "JAN": 0,
+            "FEB": 1,
+            "MAR": 2,
+            "APR": 3,
+            "MAY": 4,
+            "JUN": 5,
+            "JULY": 6,
+            "AUG": 7,
+            "SEPT": 8,
+            "OCT": 9,
+            "NOV": 10,
+            "DEC": 11
+        };
 
+        function returndate(year, month, date) {
+            month = monthToNum[month];
+            var date = new Date(year, month, date);
+            return date;
+        }
 
+        var centerEvent = {};
+        // fill in rest of the events
 
-        var centerEvent =
+        var allEvents = [
             {
                 "title": "Introduction Session",
                 "description": " The Introduction session of ISTE i.e. Indian Society for Technical Education was held on 14-8-2014. The first membership drive has seen as many as 400 students register for the student chapter.             \
@@ -37,13 +58,7 @@ The whole experience was enriched with the presence of Dr. Jandhyala.N.Murthy, T
                     "contact_no": "9160637470",
 
                 }
-            };
-
-        // fill in rest of the events
-
-
-        var allEvents = [
-
+            },
             {
                 "title": "Technical Talk On 'Water Level Indicator' ",
                 "description": " As the mission of ISTE is to provide exposure to the students about the myriad options they can opt for in the field of Technical education, ISTE GRIET started a new wing Tech talks . In these Tech talks students will be exposed to different technologies and diverse topics which they would not be able to cover in their academic schedule.On 27th October,2014 ISTE student chapter had its first tech talk on the topic “Water Level Indicator”.  Around 30 students attended the session, and the session received positive feedback to conduct such events further.",
@@ -386,8 +401,10 @@ The participants were given a choice to choose either from the topics of their o
                     "timings": "10am-4pm",
                     "contact_no": "9000038040",
                 }
-
             },
+            //event 17
+
+
 
             // end
         ];
@@ -614,8 +631,6 @@ The participants were given a choice to choose either from the topics of their o
                 }
 
             }
-
-
 
             // end
         ];
@@ -910,50 +925,69 @@ The participants were given a choice to choose either from the topics of their o
 
         ];
 
-
-
-
         // edit items to be added to bold;
-        var bolds = ["iste", "Dr.Adapa Ramarao", "Dr. V.N Mani", "Dr. Y Vijayalatha", "'Android Workshop", "Tech talks","Tech Zap",
-        "Does the world need Nuclear Energy ?","ideaz","Paper presentations"];
-        // teams data end
+        var bolds = ["iste", "Dr.Adapa Ramarao", "Dr. V.N Mani", "Dr. Y Vijayalatha", "'Android Workshop", "Tech talks", "Tech Zap",
+            "Does the world need Nuclear Energy ?", "ideaz", "Paper presentations"];
+
+        console.time("highlight");
         var reg = new RegExp();
         var availablesingledata = [centerEvent, mela_main];
         var availablemultipledata = [allEvents, mela_rest];
+
+        // Generate short description  and date
+         availablemultipledata.forEach(function (event) {
+            event.forEach(function (each_event, index) {
+                event[index]["short_description"] = each_event.description.trim().split(" ", 41).join(" ") + " ...";
+                event[index]["fulldate"] = returndate(event[index].year, event[index].month, event[index].day);
+            });
+        });
+          // now sort the data base on fulldate
+        availablemultipledata.forEach(function (event, index) {
+            availablemultipledata[index] = event.sort(function (a, b) {
+                if (a.fulldate < b.fulldate) {
+                    return 1;
+                } else if (a.fulldate > b.fulldate) {
+                    return -1;
+                }
+                return 0;
+            });
+        });
+        // eND SORTING 
+
+        // GET THE center event after sorting so well fetch the latest event always
+        centerEvent = allEvents.shift();
+        availablesingledata[0] = centerEvent;
+        //banner data short_description generation
+        availablesingledata.forEach(function (event) {
+            event["short_description"] = event.description.trim().split(" ", 150).join(" ") + " ...";
+            event["fulldate"] = returndate(event.year, event.month, event.day);
+        });
+  
+
         bolds.forEach(function (eachbold) {
             // console.log(eachbold);
             // \\s:match whitespace , \\W: matches all that is not a word char [^A-Za-z0-9_]
             var name = "\\s" + eachbold + "\\s?\\W";
             reg.compile(name, "gi");
-
             //now loop over all our events data
-
             centerEvent.description = centerEvent.description.replace(reg, " <strong>" + eachbold + "</strong> ");
             mela_main.description = mela_main.description.replace(reg, " <strong>" + eachbold + "</strong> ");
-
             availablesingledata.forEach(function (eachEvent) {
-
                 if (eachEvent.description_para1) {
                     eachEvent.description_para1 = eachEvent.description_para1.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
-
                 if (eachEvent.description_para2) {
                     eachEvent.description_para2 = eachEvent.description_para2.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
                 if (eachEvent.description_para3) {
                     eachEvent.description_para3 = eachEvent.description_para3.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
-
-
             });//if
-
             allEvents.forEach(function (eachEvent, index) {
                 allEvents[index].description = eachEvent.description.replace(reg, " <strong>" + eachbold + "</strong> ");
-
                 if (allEvents[index].description_para1) {
                     allEvents[index].description_para1 = eachEvent.description_para1.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
-
                 if (allEvents[index].description_para2) {
                     allEvents[index].description_para2 = eachEvent.description_para2.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
@@ -963,11 +997,9 @@ The participants were given a choice to choose either from the topics of their o
             });//allEvents
             mela_rest.forEach(function (eachEvent, index) {
                 mela_rest[index].description = eachEvent.description.replace(reg, " <strong>" + eachbold + "</strong> ");
-
                 if (mela_rest[index].description_para1) {
                     mela_rest[index].description_para1 = eachEvent.description_para1.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
-
                 if (mela_rest[index].description_para2) {
                     mela_rest[index].description_para2 = eachEvent.description_para2.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
@@ -975,38 +1007,9 @@ The participants were given a choice to choose either from the topics of their o
                     mela_rest[index].description_para3 = eachEvent.description_para3.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
             });
-
-
-
-
         });//bolds for each
 
-
-        // Generate short description 
-
-        //banner data short_description generation
-        availablesingledata.forEach(function (event) {
-            event["short_description"] = event.description.trim().split(" ", 150).join(" ") + " ...";
-        });
-
-        // console.log(availablemultipledata);
-        availablemultipledata.forEach(function (event) {
-            // console.log(event);
-            event.forEach(function (each_event, index) {
-                event[index]["short_description"] = each_event.description.trim().split(" ", 41).join(" ") + " ...";
-            });
-        });
-
-
-
-        // console.log(mela_rest);
-
-
-
-
-
-
-
+        console.timeEnd("highlight");
         var service = {
             centerEvent: centerEvent,
             allEvents: allEvents,
@@ -1015,11 +1018,6 @@ The participants were given a choice to choose either from the topics of their o
             mela_main: mela_main,
             mela_rest: mela_rest
         };
-
-
-
-
         return service;
-
     }//factory
 })();
