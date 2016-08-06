@@ -404,6 +404,31 @@ The participants were given a choice to choose either from the topics of their o
             },
             //event 17
 
+            {
+                "title": "Fast And Furious",
+                "description": "People recognize themselves in commodities but find their soul in AUTOMOBILES. Calling all the automobile nerds out! ISTE GRIET SB presents 'Fast and Furious', an automobile design competition being held on 15th July. The main objective is to design your own futuristic locomotive with the present technology.",
+                "description_para1": "There is no entry fee and you should send in your designs either by a paper or a PowerPoint presentation. For more details, view the poster below or contact ISTE",
+                // "description_para2":"Here are the results of the most awaiting event PICOMENTRY..!!Congratulations to the winners.https://drive.google.com/open…https://drive.google.com/open…",
+                "date_full": "",
+                "year": "2016",
+                "month": "JULY",
+                "day": "15",
+                "title_img_src": "title17.jpg",
+                "event_link": "#/event/fast_and_furious",
+                "gallery": ["g63.jpg", "g64.jpg", "g65.jpg", "g66.jpg"],
+                "imagedirectory": "images/",
+                "on_center_page": true,
+                "hash": "uniquetothispage",
+                "test_random_code": "",
+                "registrationDetails": {
+                    "room_no": "4404",
+                    "timings": "11am-1pm",
+                    "contact_no": "9000038040",
+                }
+
+            },
+            //event 18
+
 
 
             // end
@@ -426,7 +451,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "30",
                 "title_img_src": "melamain.jpg",
                 "event_link": "#/event/mela_main",
-                "gallery": ["g1.jpg", "g2.jpg", "g3.jpg", "g4.jpg", "g5.jpg", "g6.jpg"],
+                "gallery": ["nt1.jpg", "ws3.jpg", "tech1.jpg", "music.jpg", "pc4.jpg", "lat2.jpg"],
                 "imagedirectory": "images/mela/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -456,7 +481,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "30",
                 "title_img_src": "event.png",
                 "event_link": "#/event/Technical_Events",
-                "gallery": ["rangoli2.jpg", "rangoli3.jpg", "rangoli4.jpg", "rangoli5.jpg", "rangoli6.jpg"],
+                "gallery": ["tech1.jpg", "tech2.jpg", "tech3.jpg", "tech4.jpg", "tech5.jpg"],
                 "imagedirectory": "images/mela/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -477,7 +502,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "29",
                 "title_img_src": "androidmain.jpg",
                 "event_link": "#/event/android_ws",
-                "gallery": ["g7.jpg"],
+                "gallery": ["ws1.jpg", "ws2.jpg", "ws3.jpg", "ws4.jpg"],
                 "imagedirectory": "images/mela/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -508,7 +533,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "30",
                 "title_img_src": "ppt.png",
                 "event_link": "#/event/ppt",
-                "gallery": ["g7.jpg"],
+                "gallery": ["ppt1.jpg", "ppt 2.jpg", "ppt 3.jpg", "ppt 4.jpg"],
                 "imagedirectory": "images/mela/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -535,7 +560,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "30",
                 "title_img_src": "nontech.jpg",
                 "event_link": "#/event/Non_Technical",
-                "gallery": ["g8.jpg"],
+                "gallery": ["nt1.jpg", "nt2.jpg", "nt3.jpg", "nt4.jpg"],
                 "imagedirectory": "images/mela/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -556,7 +581,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "30",
                 "title_img_src": "music.jpg",
                 "event_link": "#/event/Music",
-                "gallery": ["title10.jpg"],
+                "gallery": ["singing.jpg", "singing 3.jpg", "singing 2.jpg"],
                 "imagedirectory": "images/mela/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -577,7 +602,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "30",
                 "title_img_src": "lat.jpg",
                 "event_link": "#/event/literatureandarts",
-                "gallery": ["title10.jpg"],
+                "gallery": ["lat.jpg", "lat1.jpg", "lat4.jpg", "lat3.jpg", "lat2.jpg"],
                 "imagedirectory": "images/mela/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -598,7 +623,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "30",
                 "title_img_src": "photoclickz.png",
                 "event_link": "#/event/photoclickz",
-                "gallery": [""],
+                "gallery": ["pc1.jpg", "pc2.jpg", "pc3.jpg", "pc4.jpg", "pc5.jpg"],
                 "imagedirectory": "images/mela/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -630,7 +655,7 @@ The participants were given a choice to choose either from the topics of their o
                     "contact_no": "90000380480",
                 }
 
-            }
+            },
 
             // end
         ];
@@ -935,13 +960,13 @@ The participants were given a choice to choose either from the topics of their o
         var availablemultipledata = [allEvents, mela_rest];
 
         // Generate short description  and date
-         availablemultipledata.forEach(function (event) {
+        availablemultipledata.forEach(function (event) {
             event.forEach(function (each_event, index) {
                 event[index]["short_description"] = each_event.description.trim().split(" ", 41).join(" ") + " ...";
                 event[index]["fulldate"] = returndate(event[index].year, event[index].month, event[index].day);
             });
         });
-          // now sort the data base on fulldate
+        // now sort the data base on fulldate
         availablemultipledata.forEach(function (event, index) {
             availablemultipledata[index] = event.sort(function (a, b) {
                 if (a.fulldate < b.fulldate) {
@@ -962,7 +987,7 @@ The participants were given a choice to choose either from the topics of their o
             event["short_description"] = event.description.trim().split(" ", 150).join(" ") + " ...";
             event["fulldate"] = returndate(event.year, event.month, event.day);
         });
-  
+
 
         bolds.forEach(function (eachbold) {
             // console.log(eachbold);
@@ -1012,6 +1037,7 @@ The participants were given a choice to choose either from the topics of their o
         console.timeEnd("highlight");
         var service = {
             centerEvent: centerEvent,
+
             allEvents: allEvents,
             names16: names16,
             names15: names15,
