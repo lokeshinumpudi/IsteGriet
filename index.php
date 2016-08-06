@@ -54,15 +54,15 @@
 
     <!--top menu end-->
 
-    <div class="ui  container">
+    <div>
         <ng-view></ng-view>
     </div>
 
 
 
 
-    <div class="ui inverted vertical footer segment" style="    position: relative;
-    top: 20%;">
+    <div class="ui inverted vertical footer segment" style=" position: relative;
+    top: 5%;">
         <div class="ui center aligned container">
             <div class="ui stackable inverted divided grid">
                 <div class="three wide column">
