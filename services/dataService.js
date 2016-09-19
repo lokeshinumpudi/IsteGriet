@@ -24,7 +24,8 @@
         };
 
         function returndate(year, month, date) {
-            month = monthToNum[month];
+
+            month = monthToNum[month.toUpperCase()];
             var date = new Date(year, month, date);
             return date;
         }
@@ -292,7 +293,7 @@ The participants were given a choice to choose either from the topics of their o
             //event12
             {
                 "title": "Core Committee Selections 2016",
-                "description": "",
+                "description": "ISTE GRIET is conducting selections for all the people out there.Dont miss this chance to become a integral part of ISTE family.We are eagerly waiting to meet you guys.",
                 "date_full": "",
                 "year": "2016",
                 "month": "JAN",
@@ -314,7 +315,7 @@ The participants were given a choice to choose either from the topics of their o
             //event13
             {
                 "title": "Core Committee Selections 2015",
-                "description": "",
+                "description": "Do you want to organize the events like us ??? Do you want to join us ??? Do you want to be a part of our committee???? If its Yes,Don't miss the opportunity attend our selections and become a integral part of largest technical body in GRIET",
                 "date_full": "",
                 "year": "2015",
                 "month": "MAR",
@@ -428,6 +429,29 @@ The participants were given a choice to choose either from the topics of their o
 
             },
             //event 18
+            {
+                "title": "Industrial Visit to RTTC",
+                "description": "ISTE GRIET SB is back with another departmental event and this time its for the E.C.E students.We have planned an industrial visit to RTTC(B.S.N.L) at gachibowli on 11-08-2016.Transportation will be provided.This is an amazing opportunity to get practical knowledge in the latest equipment being used",
+                "description_para1": "Register yourself via provided link : <a target='blank' href='https://docs.google.com/forms/d/e/1FAIpQLScLF4lrMl6pYcgA_QRZjq4iKtHjaCAU1qEa9blRuttcGcqFpg/viewform?c=0&w=1'>Click to register</a>",
+                "description_para2": "NOTE:Limited Registrations. Registration Fee : Rs.230/-",
+                "date_full": "",
+                "year": "2016",
+                "month": "AUG",
+                "day": "11",
+                "title_img_src": "title18.jpg",
+                "event_link": "#/event/industrial_visit_rttc",
+                "gallery": ["title18.jpg"],
+                "imagedirectory": "images/",
+                "on_center_page": true,
+                "hash": "uniquetothispage",
+                "test_random_code": "",
+                "registrationDetails": {
+                    "room_no": "",
+                    "timings": "10:00 to 1:30",
+                    "contact_no": "9014074488",
+                }
+
+            },
 
 
 
@@ -684,7 +708,7 @@ The participants were given a choice to choose either from the topics of their o
 
             {
                 "name": "A.Rasagnya",
-                "image_src": "rasagnya.jpg",
+                "image_src": "rasagnyaa.jpg",
                 "role": "Secretary",
                 "fb_url": "https://www.facebook.com/rasagnya.reddy.35?fref=ts",
                 "imagedirectory": "images/core/"
@@ -952,7 +976,7 @@ The participants were given a choice to choose either from the topics of their o
 
         // edit items to be added to bold;
         var bolds = ["iste", "Dr.Adapa Ramarao", "Dr. V.N Mani", "Dr. Y Vijayalatha", "'Android Workshop", "Tech talks", "Tech Zap",
-            "Does the world need Nuclear Energy ?", "ideaz", "Paper presentations"];
+            "Does the world need Nuclear Energy ?", "ideaz", "Paper presentations", "Rs.230/-"];
 
         console.time("highlight");
         var reg = new RegExp();

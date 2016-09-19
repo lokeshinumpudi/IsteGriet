@@ -1,0 +1,46 @@
+<div class="width-control">
+
+    <div class="ui segment">
+        
+
+
+        <p class="ui header center">Some cool shit bout teh team!</p>
+
+       
+        <p>Write some awesomness bout the team NESS!!!!</p>
+    </div>
+</div>
+
+<div class="ui horizontal divider header">
+    <div class="ui header">
+        Team
+    </div>
+</div>
+
+<div class="btn-center">
+    <div class="ui large buttons">
+        <button ng-click="team.btnclicked($event)" data-year="2016" class="ui blue basic button active team-year-btns">2016</button>
+        <div class="or"></div>
+        <button ng-click="team.btnclicked($event)" data-year="2015" class="ui blue basic button team-year-btns">2015</button>
+    </div>
+</div>
+
+
+<div class="team-members">
+    <div class="ui  container">
+        <div class="ui six doubling cards">
+
+            <div class="width-control-team-members">
+                    <div class="ui stackable grid">
+                    <div ng-repeat="teammember in team.names" class="two wide column each-person">
+                        <img class="ui image" ng-src="{{teammember.imagedirectory}}{{teammember.image_src}}" alt="">
+                        
+                        <strong>{{teammember.name}} </strong>
+                         <small>{{teammember.role}} <a ng-href="{{teammember.fb_url}}" target="blank"> <i class="icon-facebook icon-facebook-official"></i> </a></small> 
+
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</div>

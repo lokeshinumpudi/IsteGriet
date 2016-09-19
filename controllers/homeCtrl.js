@@ -39,7 +39,7 @@
                     home["title" + count] = true;
                     home["hidetitle" + count] = false;
                     //now that we made the next item active stop the loop from going furthur
-                    console.log("currently active:", count);
+                    // console.log("currently active:", count);
                     break;
                 }//if
             }

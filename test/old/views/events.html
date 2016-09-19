@@ -1,0 +1,119 @@
+<!--Main event-->
+
+<div class="ui stackable grid">
+    <div class="row">
+        <div class="three wide column hide-mobile"></div>
+
+        <div class="ten wide column">
+            <!--Center main events content-->
+            <div class="ui vertically divided grid">
+                <div class="two column row">
+                    <div class="">
+                        <div class="column">
+                            <div class="events-banner-right" style="background-image:url({{events.center_event.imagedirectory}}{{events.center_event.title_img_src}});background-size:cover">
+                                <!--<img src="" alt="" class="ui fluid image">-->
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="events-banner-left">
+                                <h2>
+                    {{events.center_event.title}}
+                              </h2>
+
+                                <!--<p>{{events.center_event.description}}</p>-->
+
+                                <render-description sourcedata="events.center_event" iseventspage="true"></render-description>
+
+                                <a class="ui button" ng-href="{{events.center_event.event_link}}" type=""> Read more!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--thrid column no padding-->
+                </div>
+            </div>
+            <!--Main event-->
+            <!--Center main event content end-->
+        </div>
+        <!--side dates-->
+        <div class="three wide column hide-mobile">
+
+            <div class="events-history-view-dates">
+                <div class="ui secondary right fixed vertical pointing menu">
+                    <a href="" class="item event-history-view-years" ng-click="events.selectedYear($event)" data-year="2016"> 2016</a>
+                    <a href="" class="item event-history-view-years" ng-click="events.selectedYear($event)" data-year="2015"> 2015</a>
+                    <a href="" class="item event-history-view-years" ng-click="events.selectedYear($event)" data-year="2014"> 2014</a>
+                </div>
+
+            </div>
+
+
+            <!--Side dates end-->
+        </div>
+    </div>
+</div>
+
+
+
+<!--REst of the articles-->
+
+<div class="ui divider horizontal header more-events-header">
+    <a href="">More Events</a>
+</div>
+
+<div class="width-control-more-events">
+
+    <div class="ui search" ng-class="{loading:events.search_loading}">
+        <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Search for events" ng-model="events.event_search">
+            <i class="search icon">
+
+             </i>
+
+        </div>
+
+        <div class="results"></div>
+    </div>
+    <div class="ui  segment">
+        <div class="ui items">
+
+            
+            <div ng-repeat="each_event in events.allevents track by $index  " class="ui item each-event">
+                <div class="ui medium image">
+                    <img ng-src="{{each_event.imagedirectory}}{{each_event.title_img_src}}" alt="">
+                </div>
+                <div class="content">
+                    <div class="header">
+                        {{each_event.title}}
+                    </div>
+                    <div class="meta">
+                        {{each_event.month}}- {{each_event.day}}
+                        <span class="year">{{each_event.year}}</span>
+                    </div>
+                    <div class="description">
+
+                        <render-description sourcedata="each_event" iseventspage="true"></render-description>
+                    </div>
+                    <div class="extra">
+                        <a class="ui button" ng-href="{{each_event.event_link}}" type=""> Read more!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-show="events.noresults" class="ui item each-event">
+                <div class="content">
+                    <div class="header">
+                        Sorry no results found ! Try <span class="hint-search" ng-click="events.hintClick($event)">Digital Marketing</span>
+                    </div>
+                </div>
+                 
+                 </div>
+            <!--ng-repeat-->
+            <!--rest of the events-->
+        </div>
+        <!--ui items-->
+
+    </div>
+    <!--ui loading segment-->
+
+
+</div>

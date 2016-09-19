@@ -19,15 +19,15 @@
         transform: none;
     }
 }
-@keyframes slideInUp {
-  from {
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
 
-  to {
-    transform: translate3d(0, 0, 0);
-  }
+@keyframes slideInUp {
+    from {
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 @keyframes fadeInUp {
@@ -74,7 +74,6 @@ to {
 }
 .fadeIn {
     animation-name: fadeIn;
-    
 }
 @keyframes fadeOut {
     from {
@@ -230,12 +229,27 @@ to {
         top: -14px;
     }
     
+    .hometitles .content {
+        font-size: 16px !important;
+    }
+    
     .home-events {
         top: 60px !important;
     }
     
     .ui.horizontal.segments {
         background-color: rgba(255, 255, 255, 0.3) !important;
+    }
+    
+    .ui.attached.segment {
+        margin: 1px -1px !important;
+        padding: 0.81em !important;
+    }
+    /*fix padding in mobile cause segments take up large space when used side by side*/
+    
+    .ui.segment {
+        padding: 0.2em !important;
+        text-align: center;
     }
     
     .ui.segments>.segment {
@@ -287,6 +301,12 @@ to {
     }
     /*event detail end*/
     /*team page*/
+    .team p{
+        font-size:16px;
+    }
+    .team blockquote{
+        
+    }
     
     .each-person img {
         height: auto !important;
@@ -301,6 +321,15 @@ to {
         display: inline-block !important;
     }
     /*team page end*/
+    /*contact page*/
+    
+    .contact-pad {
+        left: 3.5% !important;
+        position: relative !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    /*contact page end*/
 }
 
 /*mobile styles end*/
@@ -353,10 +382,9 @@ to {
     left: 37%;
     font-size: 24px;
     padding-top: 3px;
-   
 }
 .hometitles .active .title {
-     animation-name: fadeInDown;
+    animation-name: fadeInDown;
     animation-delay: 200;
     animation-duration: 1s;
 }
@@ -364,17 +392,17 @@ to {
     margin-top: 10px;
     max-width: 400px;
     font-size: 20px;
+    text-align: center;
     padding: 5px;
-    
 }
 .hometitles .active .content {
     animation-name: slideInUp;
-    animation-delay:300;
+    animation-delay: 300;
     animation-duration: 1.4s;
 }
 .home-events {
     position: relative !important;
-    top: -105px ;
+    top: -105px;
 }
 .home-events .header {
     /*color: white !important;*/
@@ -488,9 +516,14 @@ to {
 /*team end*/
 
 /*contact*/
-.move-25-right {
-    left: 25%;
+.contact-pad {
+    left: 23%;
     position: relative;
+    padding-bottom: 150px;
+    padding-top: 100px;
+}
+.ui.cards>.card {
+    margin: .875em 2em !important;
 }
 strong {
     text-transform: uppercase;
@@ -507,4 +540,28 @@ strong:hover {
     background-position: -100%;
     cursor: pointer;
     color: #F3FFBD;
+}
+
+/*about*/
+.about p {
+    font-size: 16px !important;
+    text-align: justify;
+    padding: 3px;
+    margin-top: 20px;
+}
+.blockquote {
+    page-break-inside: avoid;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-left: 0.25rem solid #eceeef;
+}
+.blockquote-footer {
+    font-size: 97%;
+    color: #818a91;
+    text-align: justify;
+    padding: 10px;
+}
+.blockquote-footer::before {
+    content: "\2014 \00A0";
 }

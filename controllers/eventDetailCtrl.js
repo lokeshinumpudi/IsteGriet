@@ -9,7 +9,8 @@
     function eventDetailCtrl($rootScope, $route, isteData) {
         var eventDetail = this;
         eventDetail.event = {};
-        
+        window.scrollTo(0,75);
+
         // console.log($route.current.params);
         if ($rootScope.events) {
             for (var i = 0; i < $rootScope.events.length; i++) {
@@ -28,8 +29,8 @@
             for (var i = 0; i < isteData.allEvents.length; i++) {
                 AllEvents.push(isteData.allEvents[i]);
             }
-             for (var i = 0; i < isteData.mela_rest.length; i++) {
-                AllEvents.push(isteData.mela_rest[i]);   
+            for (var i = 0; i < isteData.mela_rest.length; i++) {
+                AllEvents.push(isteData.mela_rest[i]);
             }
 
             for (var i = 0; i < AllEvents.length; i++) {

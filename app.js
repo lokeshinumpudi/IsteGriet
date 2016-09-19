@@ -65,9 +65,9 @@
 
     run.$inject = ['isteData'];
 
-    function run(isteData){
+    function run(isteData) {
 
-        
+
     }
 
 
