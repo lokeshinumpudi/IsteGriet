@@ -708,7 +708,7 @@ The participants were given a choice to choose either from the topics of their o
 
             {
                 "name": "A.Rasagnya",
-                "image_src": "rasagnyaa.jpg",
+                "image_src": "rasna.jpg",
                 "role": "Secretary",
                 "fb_url": "https://www.facebook.com/rasagnya.reddy.35?fref=ts",
                 "imagedirectory": "images/core/"
@@ -760,6 +760,13 @@ The participants were given a choice to choose either from the topics of their o
                 "image_src": "vamsi.jpg",
                 "role": "Member Relations",
                 "fb_url": "https://www.facebook.com/vamsikrish815?fref=ts",
+                "imagedirectory": "images/core/"
+            },
+             {
+                "name": "I.Lokesh Chandra",
+                "image_src": "lokesh.jpg",
+                "role": "Web Master",
+                "fb_url": "https://www.facebook.com/inumpudi.lokesh?fref=ts",
                 "imagedirectory": "images/core/"
             },
             {
@@ -821,14 +828,6 @@ The participants were given a choice to choose either from the topics of their o
                 "imagedirectory": "images/core/"
             },
             {
-                "name": "G.Prashanth",
-                "image_src": "prashanth.jpg",
-                "role": "Tech Lead (Mech)",
-                "fb_url": "https://www.facebook.com/",
-                "imagedirectory": "images/core/"
-            },
-
-            {
                 "name": "A.Sowmya",
                 "image_src": "sowmya.jpg",
                 "role": "Tech Lead (Civil)",
@@ -842,13 +841,7 @@ The participants were given a choice to choose either from the topics of their o
                 "fb_url": "https://www.facebook.com/",
                 "imagedirectory": "images/core/"
             },
-            {
-                "name": "I.Lokesh Chandra",
-                "image_src": "lokesh.jpg",
-                "role": "Web Master",
-                "fb_url": "https://www.facebook.com/inumpudi.lokesh?fref=ts",
-                "imagedirectory": "images/core/"
-            },
+           
 
 
         ];
