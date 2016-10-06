@@ -6,6 +6,7 @@
         .factory('isteData', isteData);
 
     isteData.$inject = [];
+
     function isteData() {
 
         var monthToNum = {
@@ -33,8 +34,7 @@
         var centerEvent = {};
         // fill in rest of the events
 
-        var allEvents = [
-            {
+        var allEvents = [{
                 "title": "Introduction Session",
                 "description": " The Introduction session of ISTE i.e. Indian Society for Technical Education was held on 14-8-2014. The first membership drive has seen as many as 400 students register for the student chapter.             \
 The mission of ISTE is to provide exposure to the students about the myriad options they can opt for in the field of Technical education, but at the same time ISTE provides assistance with various non-technical fields for the overall personality development of a student. \
@@ -59,8 +59,7 @@ The whole experience was enriched with the presence of Dr. Jandhyala.N.Murthy, T
                     "contact_no": "9160637470",
 
                 }
-            },
-            {
+            }, {
                 "title": "Technical Talk On 'Water Level Indicator' ",
                 "description": " As the mission of ISTE is to provide exposure to the students about the myriad options they can opt for in the field of Technical education, ISTE GRIET started a new wing Tech talks . In these Tech talks students will be exposed to different technologies and diverse topics which they would not be able to cover in their academic schedule.On 27th October,2014 ISTE student chapter had its first tech talk on the topic “Water Level Indicator”.  Around 30 students attended the session, and the session received positive feedback to conduct such events further.",
                 "date_full": "",
@@ -106,8 +105,7 @@ Winners of the event was the team of J.Vivek(ECE-3) and G.Uttej Reddy(EEE-3).",
                     "contact_no": "9014074488",
                 }
 
-            },
-            {
+            }, {
                 "title": "Tech Zap 2015",
                 "description": " As part of rapid internet growth in the last 10 years, most of the events are now happening online like webinars etc. The ISTE Student Chapter of GRIET has as many as 1000 viewers on its facebook page and its website. To encourage students to use the internet in a resourceful manner , a quiz competition' Tech Zap ' was conducted online.The quiz was created using google forms and responses were collected. The quiz started at 7:30 pm and within 30 minutes more than 80 responses were collected.",
                 "date_full": "",
@@ -463,31 +461,30 @@ The participants were given a choice to choose either from the topics of their o
 
         // mela data
 
-        var mela_main =
-            {
-                "title": "MELA-The Tech Carnival",
-                "description": " MELA- The Tech Carnival organized aims to provide a platform for budding engineers to showcase their skills in a plethora of events designed to exercise their minds. MELA which stands for Music, Education, Literature, Arts consists of a series of events providing an opportunity for the students to exhibit their talents. ISTE MELA also takes the immense pride in introducing the inter-branch competition with the objective of developing the competitive spirit ",
-                "description_para1": "This one day carnival was held on 30th March, 2016 involving the first year students. MELA conducted about 20 major competitions- officially broken into five categories – Technical, Non-Technical, Literary, Musical and Art Events. Coupled with a highly appreciated 'Android Workshop' MELA has become even more majestic and elegant.",
-                "description_para2": "An enormous majority of participants were satisfied with the organization of the events. A large number of students applauded – both the quality of the events and also the management.",
-                "date_full": "",
-                "year": "2016",
-                "month": "MAR",
-                "day": "30",
-                "title_img_src": "melamain.jpg",
-                "event_link": "#/event/mela_main",
-                "gallery": ["nt1.jpg", "ws3.jpg", "tech1.jpg", "music.jpg", "pc4.jpg", "lat2.jpg"],
-                "imagedirectory": "images/mela/",
-                "on_center_page": true,
-                "hash": "uniquetothispage",
-                "test_random_code": "",
-                "registrationDetails": {
-                    "room_no": "1st Year block",
-                    "timings": "10am to 4 pm",
-                    "contact": "",
-                    "contact_no": "9000038040",
+        var mela_main = {
+            "title": "MELA-The Tech Carnival",
+            "description": " MELA- The Tech Carnival organized aims to provide a platform for budding engineers to showcase their skills in a plethora of events designed to exercise their minds. MELA which stands for Music, Education, Literature, Arts consists of a series of events providing an opportunity for the students to exhibit their talents. ISTE MELA also takes the immense pride in introducing the inter-branch competition with the objective of developing the competitive spirit ",
+            "description_para1": "This one day carnival was held on 30th March, 2016 involving the first year students. MELA conducted about 20 major competitions- officially broken into five categories – Technical, Non-Technical, Literary, Musical and Art Events. Coupled with a highly appreciated 'Android Workshop' MELA has become even more majestic and elegant.",
+            "description_para2": "An enormous majority of participants were satisfied with the organization of the events. A large number of students applauded – both the quality of the events and also the management.",
+            "date_full": "",
+            "year": "2016",
+            "month": "MAR",
+            "day": "30",
+            "title_img_src": "melamain.jpg",
+            "event_link": "#/event/mela_main",
+            "gallery": ["nt1.jpg", "ws3.jpg", "tech1.jpg", "music.jpg", "pc4.jpg", "lat2.jpg"],
+            "imagedirectory": "images/mela/",
+            "on_center_page": true,
+            "hash": "uniquetothispage",
+            "test_random_code": "",
+            "registrationDetails": {
+                "room_no": "1st Year block",
+                "timings": "10am to 4 pm",
+                "contact": "",
+                "contact_no": "9000038040",
 
-                }
-            };
+            }
+        };
 
         // fill in rest of the events
 
@@ -497,7 +494,7 @@ The participants were given a choice to choose either from the topics of their o
             {
                 "title": "Technical Events ",
                 "description": " The main objective of MELA is to provide an opportunity for the students to showcase their technical skills. MELA included 7 technical events planned and organized at its best of quality. The events were decided keeping the interest and need of every student.",
-                "topics": ["1. Paper Presentation", "2. Sci Cross", "3. Math Masti", "4. Decode and Connect", "5. Ram up the circuit", "6. Code war", "7.C-Monopoly",],
+                "topics": ["1. Paper Presentation", "2. Sci Cross", "3. Math Masti", "4. Decode and Connect", "5. Ram up the circuit", "6. Code war", "7.C-Monopoly", ],
                 "description_para1": "The basic motto of the Paper presentation event was to provide an opportunity to build their technical knowledge, critical thinking and enhance their communication skills to a superlative level. The electrical students have shown a massive interest in participating in these events making them successful. Coding is only thing that helps you build yourself in this modern world. MELA has conducted two major events on coding to help the students improve their coding skills. Due to the enormous response from the students these events turned out spicy which included a lot of competition. This surely was a great attraction for MELA.",
                 "date_full": "",
                 "year": "2016",
@@ -516,8 +513,7 @@ The participants were given a choice to choose either from the topics of their o
                     "contact_no": "90000380480",
 
                 }
-            },
-            {
+            }, {
                 "title": "Android Workshop",
                 "description": "Welcome all to the splash of awesomeness provided to you by ISTE. This workshop will bring out all the hidden creativity which was imprisoned in your inner mind. Thus unleash your power to make superb and useful apps for the world by attending this workshop. Because  'LIMITS EXISTS ONLY IN THE MIND'.Please register near help desk",
                 "date_full": "",
@@ -537,8 +533,7 @@ The participants were given a choice to choose either from the topics of their o
                     "contact_no": "90000380480",
 
                 }
-            },
-            {
+            }, {
                 "title": "Paper Presentation ",
                 "description": "Are you a person who is finding a platform to showcase your self-confidence and communication skills?Grab this oppurtunity where you can build your technical knowledge , critical thinking and enhance your communication skills to a top level with our paper presentation event on 30th March.",
                 "topics": ["Make sure you follow these simple rules!!",
@@ -549,7 +544,8 @@ The participants were given a choice to choose either from the topics of their o
                     "5.Selected abstracts will get a confirmation mail regarding further details.",
                     "6.Participation certificates will be given.",
                     "NOTE: Abstracts should be mailed to grietistemela@gmail.com",
-                    "Paper Presentation Domain:Any topic related on technology. ",],
+                    "Paper Presentation Domain:Any topic related on technology. ",
+                ],
 
                 "date_full": "",
                 "year": "2016",
@@ -595,8 +591,7 @@ The participants were given a choice to choose either from the topics of their o
                     "contact_no": "90000380480"
                 }
 
-            },
-            {
+            }, {
                 "title": "Music",
                 "description": "Music is an art form and cultural activity whose medium is sound and silence. Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything. ISTE has conducted two events under this category – Singing and Instrumentation.The students have shown a very good interest in coming up and performing in front of all the audience. Instrumentation also involved the classical instruments like harmonium which depicted the eminence in Indian music. However it remained the star event by attracting a huge audience that left the event extremely satisfied.",
                 "date_full": "",
@@ -616,8 +611,7 @@ The participants were given a choice to choose either from the topics of their o
                     "contact_no": "90000380480",
                 }
 
-            },
-            {
+            }, {
                 "title": "Literature and Arts",
                 "description": "The best platter of events brought infront of you to enjoy and dive into the plethora of technical and non-technical fun. The literature and arts part will set the groove and make you all Tap your feet asking with it.Thus grab this opportunity of excellent quality events offered to you by ISTE.Coz quality never goes out of style.*** only for first year students***#letsmela",
                 "date_full": "",
@@ -637,8 +631,7 @@ The participants were given a choice to choose either from the topics of their o
                     "contact_no": "90000380480",
                 }
 
-            },
-            {
+            }, {
                 "title": "Photo Clickz",
                 "description": "Welcome all to the REEL LIFE, where all your fantasies come to life. This is an awesome opportunity for u to showcase your photography skills and tell the world that you are the best. You have to take pictures of MELA from your camera and send us the top 10. Out of those the best picture would be selected and awarded. The last date for registration for this free event is on 29th.",
                 "date_full": "",
@@ -658,8 +651,7 @@ The participants were given a choice to choose either from the topics of their o
                     "contact_no": "90000380480",
                 }
 
-            },
-            {
+            }, {
                 "title": "Rangoli",
                 "description": "Add colours to your life with the rangoli competition held tomorrow from 3PM onwards. Intrested participants have to bring their own resources for the same.",
                 "date_full": "",
@@ -712,78 +704,67 @@ The participants were given a choice to choose either from the topics of their o
                 "role": "Secretary",
                 "fb_url": "https://www.facebook.com/rasagnya.reddy.35?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "C.Sneha Sree",
                 "image_src": "sneha sree.jpg",
                 "role": "Vice Secretary",
                 "fb_url": "https://www.facebook.com/snehachundi?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "T.Raghavendra",
                 "image_src": "Raghavendra.jpg",
                 "role": "Treasurer",
                 "fb_url": "https://www.facebook.com/thoude.raghavendra?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "K.Naimisha",
                 "image_src": "naimisha.jpg",
                 "role": "Director(Events)",
                 "fb_url": "https://www.facebook.com/",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "V.Aishwarya",
                 "image_src": "aishwarya.jpg",
                 "role": "Director(Technical)",
                 "fb_url": "https://www.facebook.com/aishwarya.varala?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Ch.Sahiti",
                 "image_src": "sahiti.jpg",
                 "role": "Event Manager",
                 "fb_url": "https://www.facebook.com/sahiti.ch.1?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Sneha Kumari",
                 "image_src": "kumari.jpg",
                 "role": "Vice Event Manager",
                 "fb_url": "https://www.facebook.com/sneha.kumari.7773631?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "G.Vamsi",
                 "image_src": "vamsi.jpg",
                 "role": "Member Relations",
                 "fb_url": "https://www.facebook.com/vamsikrish815?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-             {
+            }, {
                 "name": "I.Lokesh Chandra",
                 "image_src": "lokesh.jpg",
                 "role": "Web Master",
                 "fb_url": "https://www.facebook.com/inumpudi.lokesh?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Shounak",
                 "image_src": "shounak.jpg",
                 "role": "Public Relations",
                 "fb_url": "https://www.facebook.com/shounak.chatterjee.7?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "J.Alkeya",
                 "image_src": "alekya.jpg",
                 "role": "Marketing Head",
                 "fb_url": "https://www.facebook.com/jonnalagadda.alekya?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Abid Sheik",
                 "image_src": "abid.jpg",
                 "role": "Creative Head",
@@ -797,22 +778,19 @@ The participants were given a choice to choose either from the topics of their o
                 "role": "Event Logistics",
                 "fb_url": "https://www.facebook.com/",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Sri Lakshmi",
                 "image_src": "lakshmi.png",
                 "role": "Content Creator",
                 "fb_url": "https://www.facebook.com/srilakshmi.devi?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "K.Sai Krishna",
                 "image_src": "sai krsihna.jpg",
                 "role": "Tech Lead (ECE)",
                 "fb_url": "https://www.facebook.com/saikrishna.kandagatla.5?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Y.Naveen Kumar",
                 "image_src": "naveen.jpg",
                 "role": "Tech Lead (EEE)",
@@ -826,22 +804,20 @@ The participants were given a choice to choose either from the topics of their o
                 "role": "Tech Lead (CSE)",
                 "fb_url": "https://www.facebook.com/kuvalaya.datta?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "A.Sowmya",
                 "image_src": "sowmya.jpg",
                 "role": "Tech Lead (Civil)",
                 "fb_url": "https://www.facebook.com/sowmya.asadi?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Robin Phillip",
                 "image_src": "robin.jpg",
                 "role": "Resource Manager",
                 "fb_url": "https://www.facebook.com/",
                 "imagedirectory": "images/core/"
             },
-           
+
 
 
         ];
@@ -855,15 +831,13 @@ The participants were given a choice to choose either from the topics of their o
                 "role": "President",
                 "fb_url": "https://www.facebook.com/harshavardhanreddyharsh?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "K.Sai Rahul",
                 "image_src": "rahul.jpg",
                 "role": "Vice President",
                 "fb_url": "https://www.facebook.com/sairahul11",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Chinmaya Allu",
                 "image_src": "chin.jpg",
                 "role": "Secretary",
@@ -877,15 +851,13 @@ The participants were given a choice to choose either from the topics of their o
                 "role": "Vice Secretary",
                 "fb_url": "https://www.facebook.com/rasagnya.reddy.35?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Vishall Boppana",
                 "image_src": "vishal.jpg",
                 "role": "Event Manager",
                 "fb_url": "https://www.facebook.com/vishall.boppana?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "V.Aishwarya",
                 "image_src": "aishwarya.jpg",
                 "role": "Vice Event Manager",
@@ -909,8 +881,7 @@ The participants were given a choice to choose either from the topics of their o
                 "role": "Public Relations",
                 "fb_url": "https://www.facebook.com/sn.mansoor?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "K.Naimisha",
                 "image_src": "naimisha.jpg",
                 "role": "Event Logistics",
@@ -924,8 +895,7 @@ The participants were given a choice to choose either from the topics of their o
                 "role": "Tech Lead (EEE)",
                 "fb_url": "https://www.facebook.com/PrudhviReddy.Vemireddy?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Raj Vamshi",
                 "image_src": "raj vamshi.jpg",
                 "role": "Tech Lead (ECE)",
@@ -947,8 +917,7 @@ The participants were given a choice to choose either from the topics of their o
                 "role": "Tech Lead (Civil)",
                 "fb_url": "https://www.facebook.com/thoude.raghavendra?fref=ts",
                 "imagedirectory": "images/core/"
-            },
-            {
+            }, {
                 "name": "Mani Krishna",
                 "image_src": "mani.jpg",
                 "role": "Creative Head",
@@ -969,7 +938,8 @@ The participants were given a choice to choose either from the topics of their o
 
         // edit items to be added to bold;
         var bolds = ["iste", "Dr.Adapa Ramarao", "Dr. V.N Mani", "Dr. Y Vijayalatha", "'Android Workshop", "Tech talks", "Tech Zap",
-            "Does the world need Nuclear Energy ?", "ideaz", "Paper presentations", "Rs.230/-"];
+            "Does the world need Nuclear Energy ?", "ideaz", "Paper presentations", "Rs.230/-"
+        ];
 
         console.time("highlight");
         var reg = new RegExp();
@@ -1024,7 +994,7 @@ The participants were given a choice to choose either from the topics of their o
                 if (eachEvent.description_para3) {
                     eachEvent.description_para3 = eachEvent.description_para3.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
-            });//if
+            }); //if
             allEvents.forEach(function (eachEvent, index) {
                 allEvents[index].description = eachEvent.description.replace(reg, " <strong>" + eachbold + "</strong> ");
                 if (allEvents[index].description_para1) {
@@ -1036,7 +1006,7 @@ The participants were given a choice to choose either from the topics of their o
                 if (allEvents[index].description_para3) {
                     allEvents[index].description_para3 = eachEvent.description_para3.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
-            });//allEvents
+            }); //allEvents
             mela_rest.forEach(function (eachEvent, index) {
                 mela_rest[index].description = eachEvent.description.replace(reg, " <strong>" + eachbold + "</strong> ");
                 if (mela_rest[index].description_para1) {
@@ -1049,7 +1019,7 @@ The participants were given a choice to choose either from the topics of their o
                     mela_rest[index].description_para3 = eachEvent.description_para3.replace(reg, " <strong>" + eachbold + "</strong> ");
                 }
             });
-        });//bolds for each
+        }); //bolds for each
 
         console.timeEnd("highlight");
         var service = {
@@ -1062,5 +1032,5 @@ The participants were given a choice to choose either from the topics of their o
             mela_rest: mela_rest
         };
         return service;
-    }//factory
+    } //factory
 })();
