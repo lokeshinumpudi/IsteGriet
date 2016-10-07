@@ -6,10 +6,11 @@
         .controller('homeCtrl', homeCtrl);
 
     homeCtrl.$inject = ['$route', "$interval"];
+
     function homeCtrl($route, $interval) {
         var home = this;
         home.name = "ISTE"
-        // var divs = document.getElementsByClassName("title");
+            // var divs = document.getElementsByClassName("title");
 
         var count = 1;
 
@@ -22,28 +23,28 @@
         home.title3 = true;
         home.hidetitle3 = false;
 
-        $interval(function () {
-            for (var i = 1; i < 4; i++) {
-                //first find which is currently active and make it inactive
-                if (home["title" + i]) {
-                    home["title" + i] = false;
-                    home["hidetitle" + i] = true;
-                    //now that current ele is inactive find the next element and make it active
-                    //small condition to cycle the elements
-                    if (i == 3) {
-                        count = 1;
-                    } else {
-                        count = i + 1;
-                    }
-                    //now count is the next element that is supposed to be made active
-                    home["title" + count] = true;
-                    home["hidetitle" + count] = false;
-                    //now that we made the next item active stop the loop from going furthur
-                    // console.log("currently active:", count);
-                    break;
-                }//if
-            }
-        }, 4600);
+        // $interval(function () {
+        //     for (var i = 1; i < 4; i++) {
+        //         //first find which is currently active and make it inactive
+        //         if (home["title" + i]) {
+        //             home["title" + i] = false;
+        //             home["hidetitle" + i] = true;
+        //             //now that current ele is inactive find the next element and make it active
+        //             //small condition to cycle the elements
+        //             if (i == 3) {
+        //                 count = 1;
+        //             } else {
+        //                 count = i + 1;
+        //             }
+        //             //now count is the next element that is supposed to be made active
+        //             home["title" + count] = true;
+        //             home["hidetitle" + count] = false;
+        //             //now that we made the next item active stop the loop from going furthur
+        //             // console.log("currently active:", count);
+        //             break;
+        //         } //if
+        //     }
+        // }, 4600);
 
         // setInterval(function () {
 
@@ -81,5 +82,5 @@
 
 
 
-    }//homeController
+    } //homeController
 })();

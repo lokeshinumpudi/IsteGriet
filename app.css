@@ -163,6 +163,11 @@ to {
         display: none !important;
     }
     
+    .contact-pad {
+        padding-top: 0 !important;
+        margin: auto !important;
+    }
+    
     .homeImage {
         height: 290px !important;
         left: -20px !important;
@@ -172,6 +177,17 @@ to {
         top: -14px;
     }
     
+    .centerAttraction h2 {
+        font-size: 26px !important;
+        font-weight: 400 !important;
+    }
+    
+    .centerAttraction h3 {
+        font-size: 20px !important;
+        font-weight: 320 !important;
+        padding: 0.3em !important;
+    }
+    
     .home-events {
         top: 12px !important;
     }
@@ -179,7 +195,7 @@ to {
     .home-events-showcase {
         margin-top: 50px !important;
     }
-/*
+    /*
     .home-events-showcase .ui.stackable.cards>.card{
         width: calc(100% - 4em) !important;
     }*/
@@ -334,10 +350,8 @@ to {
     /*contact page*/
     
     .contact-pad {
-        left: 3.5% !important;
-        position: relative !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+        left: 8% !important;
+      
     }
     /*contact page end*/
 }
@@ -372,6 +386,12 @@ to {
     font-size: 35px;
     font-weight: 600;
     text-align: center;
+}
+.centerAttraction h3 {
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    padding: 2em;
 }
 .centerAttraction .hometitles {
     margin: auto;
@@ -441,10 +461,8 @@ to {
 .ui.inverted.attached.segment {
     border-color: none !important;
 }
-
 .home-events-showcase {
     position: relative;
-
 }
 
 /*home end*/
@@ -534,11 +552,16 @@ to {
 
 /*contact*/
 .contact-pad {
-    left: 23%;
+    left: 27%;
     position: relative;
-    padding-bottom: 150px;
+    padding-bottom: 30px;
     padding-top: 100px;
 }
+.contact-address .ui.segments>.segment {
+    left: 12% !important;
+    max-width: 38%;
+}
+
 /*.ui.cards>.card {
     margin: .875em 2em !important;
 }*/
