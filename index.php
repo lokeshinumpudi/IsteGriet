@@ -1,21 +1,18 @@
 <html ng-app="ISTE">
 
-
 <head>
-
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="libsmin/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="appFonts.css">
 	<link rel="stylesheet" type="text/css" href="app.css">
-
 </head>
 
 
 <body ng-controller="bodyCtrl as bodyvm">
 	<!--menu bar-->
+
 	<!--top menu start-->
-
 	<div class="ui fluid container main-menu">
-
 		<div class="ui secondary  menu">
 			<a href="#/">
 				<li class="item" ng-class="{'active':bodyvm.activetab == 'home'}">Home</li>
@@ -35,23 +32,10 @@
 				<li class="item" ng-class="{'active':bodyvm.activetab =='about'}">About</li>
 			</a>
 			<a href="#/contact">
-				<li class="item" ng-class="{'active':bodyvm.activetab =='contactUs'}">Contact Us</li>
+				<li class="item" ng-class="{'active':bodyvm.activetab =='contactUs'}">Contact</li>
 			</a>
-
-			<!--<div class="right menu">
-            <div class="item">
-                <div class="ui icon input">
-                    <input type="text" placeholder="Search Events">
-                    <i class="search link icon"></i>
-                </div>
-            </div>
-         
-        </div>-->
-
 		</div>
 	</div>
-
-
 	<!--top menu end-->
 
 	<div>
