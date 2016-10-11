@@ -15,8 +15,9 @@
 
         // console.log($route.current.params);
 
-        // CACHE data
-        if ($rootScope.events) {
+        // CACHE data if available
+        if ($rootScope.events.length >7) {
+            
             for (var i = 0; i < $rootScope.events.length; i++) {
                 // fetch the data matching the current route
                 if ($rootScope.events[i]["event_link"] == "#/event/" + $route.current.params.eventname) {
@@ -39,6 +40,8 @@
             // Simply populate all event data together
             AllEvents.push(isteData.centerEvent)
             AllEvents.push(isteData.mela_main);
+
+            console.log(AllEvents);
             for (var i = 0; i < isteData.allEvents.length; i++) {
                 AllEvents.push(isteData.allEvents[i]);
             }
