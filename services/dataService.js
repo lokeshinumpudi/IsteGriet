@@ -5,9 +5,11 @@
         .module('ISTE')
         .factory('isteData', isteData);
 
-    isteData.$inject = [];
+    isteData.$inject = ['$rootScope'];
 
-    function isteData() {
+    function isteData($rootScope) {
+
+        $rootScope["events"] = [];
 
         var monthToNum = {
             "JAN": 0,
@@ -999,6 +1001,8 @@ The participants were given a choice to choose either from the topics of their o
 
         // GET THE center event after sorting so well fetch the latest event always
         centerEvent = allEvents.shift();
+        // cache the event
+        $rootScope["events"].push(centerEvent);
         availablesingledata[0] = centerEvent;
         //banner data short_description generation
         availablesingledata.forEach(function (event) {

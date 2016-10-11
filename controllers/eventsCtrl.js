@@ -25,12 +25,17 @@
             eventsVm["allevents"].push(allevents[i]);
             // extract short desp for each event
 
+            // cache for event description view
+            // save to cache for faster load on revisit
+             $rootScope["events"].push(allevents[i]);
+
         }
 
 
-        // save to cache for faster load on revisit
-        $rootScope["events"] = allevents;
-        $rootScope["events"].push(eventsVm["center_event"]);
+        
+       
+        
+        
 
         // hint change of search text
         eventsVm.hintClick = function ($event) {
