@@ -1,8 +1,23 @@
+
+
+/*top nav styling*/
+
 .main-menu {
     padding: 8px;
-    /*background-color: ;*/
+    background-color: #1b1c1d;
+    color: #fff;
 }
 
+.main-menu .ui.secondary.menu .item {
+    margin-left: 30px;
+    color: white;
+}
+.main-menu .ui.secondary.menu .active.item {
+    background-color: #fff;
+    color: #1b1c1d;
+}
+
+/*top nav styling end*/
 /*:target {
     background-color: burlywood;
     color: white;
@@ -10,9 +25,7 @@
     display: none;
 }*/
 
-.main-menu .ui.secondary.menu .item {
-    margin-left: 30px;
-}
+
 
 .active {
     display: block !important;
