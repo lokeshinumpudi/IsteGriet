@@ -34,6 +34,16 @@
 			<a href="#/contact">
 				<li class="item" ng-class="{'active':bodyvm.activetab =='contactUs'}">Contact</li>
 			</a>
+
+			<!--<div class="right menu">
+				<div class="item">
+					<div class="ui icon input">
+						<input type="text" placeholder="Search...">
+						<i class="search link icon"></i>
+					</div>
+				</div>
+
+			</div>-->
 		</div>
 	</div>
 	<!--top menu end-->
@@ -108,15 +118,23 @@
 				</div>
 				<div class="six wide column">
 					<h4 class="ui inverted header">Social Media</h4>
-
-					<p>we are for you</p>
+					
+					<!--social links-->
+					<div class="ui horizontal inverted small divided link list">
+						<a class="item" href="https://www.facebook.com/ISTEGRIETSB/"><i class="icon-facebook"></i></a>
+						<a href="https://twitter.com/istegrietsb" class="item"><i class="icon-twitter"></i></a>
+						<a href="mailto:istegrietsb@gmail.com" class="item"><i class="icon-mail"></i></a>
+						<a href="https://www.instagram.com/istegrietsb/?hl=en" class="item"><i class="icon-instagram"></i></a>
+						<a href="#/contact#contact-number" class="item"><i class="icon-phone"></i> </a>
+					</div>
+					<!--Social links-->
 				</div>
 			</div>
 			<div class="ui inverted section divider"></div>
 			<img src="images/logos/grietlogo.png" class="ui centered mini image">
 			<div class="ui horizontal inverted small divided link list">
 				<a class="item" href="http://www.griet.ac.in/">GRIET</a>
-				<a class="item" href="#">Contact Us</a>
+				<a class="item" href="#/contact">Contact Us</a>
 				<a class="item" href="#">Terms and Conditions</a>
 				<a class="item" href="#">Privacy Policy</a>
 				<a class="item" href="#">All Rights Reserved </a>
