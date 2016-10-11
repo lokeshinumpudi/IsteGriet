@@ -21,11 +21,11 @@
         return directive;
 
         function link(scope, element, attrs) {
-            // scope.eventDetail:has the all the event details
+            // scope.eventDetail:has the all the event 
             var data = scope.dataSrc;
-
-            //A little check to see if data is actually populated or not [atleast description,short_description]
-            if(data.description == "" || data.description == null || data.description == undefined){
+            function renderText(data){
+                 //A little check to see if data is actually populated or not [atleast description,short_description]
+            if (data.description == "" || data.description == null || data.description == undefined) {
                 // location.reload();
 
                 // omg do something here!
@@ -52,6 +52,25 @@
             data.description_para1 ? document.getElementsByClassName("description_para1")[0].innerHTML = data.description_para1 : "";
             data.description_para2 ? document.getElementsByClassName("description_para2")[0].innerHTML = data.description_para2 : "";
             data.description_para3 ? document.getElementsByClassName("description_para3")[0].innerHTML = data.description_para3 : "";
+
+
+            };//renderText
+           
+            renderText(data);
+            //Useful to update the short description during search made by the user
+
+            // watch for changes made through parent controller
+            scope.$watch("dataSrc", function (newVal, oldVal) {
+                if (!newVal) {
+                    return;
+                };
+                // update the directive with newData received through controllers scope
+                renderText(newVal);
+
+                // console.log(newVal);
+            });
+
+
         } //link function
     } //renderDescription
 

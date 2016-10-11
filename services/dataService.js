@@ -32,6 +32,7 @@
         }
 
         var centerEvent = {};
+        var searchData = [];
         // fill in rest of the events
 
         var allEvents = [{
@@ -446,6 +447,30 @@ The participants were given a choice to choose either from the topics of their o
                 "registrationDetails": {
                     "room_no": "",
                     "timings": "10:00 to 1:30",
+                    "contact_no": "9014074488",
+                }
+
+            },
+            //event 19
+            {
+                "title": "Code Auction",
+                "description": "ISTE GRIET SB presents you with another departmental event 'CODE AUCTION' with a slightly different play for the students of CSE and IT departments providing you the perfect opportunity to improve your coding skills and be one of the best coders in the department. Interesting right?All the participants will be given some virtual money initially.Every question will have a certain base price and certain points to earn.They need to buy the questions in order to solve it within the time specified.Points will be awarded accordingly. The team with the highest score will be the winner.",
+                "description_para1": "All you have to do is come and register for it. *Don't miss this opportunity*<a target='blank' href='https://goo.gl/forms/nz3k4FrnIpam1zZ43'>Click here to register</a> <p> Below are the winners</p>",
+                "description_para2": "<ol><li>T.Praveen, A Vamsi, B Arun (CSE-3rd year)</li> <li>K. Amini Krishna, Sai Datta (CSE-2nd year)</li><li>D.Bala Sundeep Krishna, B.Sai Abhinay (CSE-3rd yr)</li></ol>",
+                "date_full": "",
+                "year": "2016",
+                "month": "SEPT",
+                "day": "28",
+                "title_img_src": "title19.jpg",
+                "event_link": "#/event/code_auction",
+                "gallery": ["g68.jpg", "g69.jpg", "g70.jpg"],
+                "imagedirectory": "images/",
+                "on_center_page": true,
+                "hash": "uniquetothispage",
+                "test_random_code": "",
+                "registrationDetails": {
+                    "room_no": "2305",
+                    "timings": "12:00 to 2:00",
                     "contact_no": "9014074488",
                 }
 
@@ -946,15 +971,16 @@ The participants were given a choice to choose either from the topics of their o
         var availablesingledata = [centerEvent, mela_main];
         var availablemultipledata = [allEvents, mela_rest];
 
-        // Generate short description  and date
+        // Generate short description  and fulldate
         availablemultipledata.forEach(function (event) {
             event.forEach(function (each_event, index) {
-                event[index]["short_description"] = each_event.description.trim().split(" ", 41).join(" ") + " ...";
+                // event[index]["short_description"] = each_event.description.trim().split(" ", 30).join(" ") + " ...";
                 event[index]["fulldate"] = returndate(event[index].year, event[index].month, event[index].day);
             });
         });
         // now sort the data base on fulldate
         availablemultipledata.forEach(function (event, index) {
+            // reasign after sorting
             availablemultipledata[index] = event.sort(function (a, b) {
                 if (a.fulldate < b.fulldate) {
                     return 1;
@@ -966,6 +992,11 @@ The participants were given a choice to choose either from the topics of their o
         });
         // eND SORTING 
 
+         // Well have a hard copy of all the events data for use in search
+        for (var i = 0; i < allEvents.length; i++) {
+            searchData.push(allEvents[i]);
+        }
+
         // GET THE center event after sorting so well fetch the latest event always
         centerEvent = allEvents.shift();
         availablesingledata[0] = centerEvent;
@@ -974,6 +1005,8 @@ The participants were given a choice to choose either from the topics of their o
             event["short_description"] = event.description.trim().split(" ", 150).join(" ") + " ...";
             event["fulldate"] = returndate(event.year, event.month, event.day);
         });
+
+       
 
 
         bolds.forEach(function (eachbold) {
@@ -1021,9 +1054,12 @@ The participants were given a choice to choose either from the topics of their o
             });
         }); //bolds for each
 
-        console.timeEnd("highlight");
+        // console.timeEnd("highlight");
+        // console.log(allEvents);
+        // console.log(centerEvent);
         var service = {
             centerEvent: centerEvent,
+            searchData: searchData,
 
             allEvents: allEvents,
             names16: names16,

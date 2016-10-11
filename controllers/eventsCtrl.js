@@ -16,6 +16,7 @@
         // get event data from the service
         eventsVm["center_event"] = isteData.centerEvent;
         var allevents = isteData.allEvents;
+        var searchData = isteData.searchData;
         // no below going
 
         eventsVm["allevents"] = [];
@@ -27,6 +28,7 @@
         }
 
 
+        // save to cache for faster load on revisit
         $rootScope["events"] = allevents;
         $rootScope["events"].push(eventsVm["center_event"]);
 
@@ -46,8 +48,8 @@
             eventsVm.search_loading = true;
             regexp.compile(newVal, "gi");
             var search_match = [];
-            for (var i = 0; i < allevents.length; i++) {
-                var currentevent = allevents[i];
+            for (var i = 0; i < searchData.length; i++) {
+                var currentevent = searchData[i];
                 var doesSearchMatch = regexp.exec(currentevent.title) || regexp.exec(currentevent.description) || regexp.exec(currentevent.year) || regexp.exec(currentevent.month) || regexp.exec(currentevent.registrationDetails.room_no) || regexp.exec(currentevent.registrationDetails.contact_no);
                 if (doesSearchMatch != null) {
 
@@ -63,8 +65,22 @@
             } else {
                 eventsVm.noresults = false;
             }
-            console.log(eventsVm.noresults);
+            // console.log(eventsVm.noresults);
+
+            
+
+         for (var i = 0; i < search_match.length; i++) {
+
+             console.log(search_match[i]["description"].length);
+             search_match[i]["short_description"] = search_match[i]["description"].trim().split(" ", 30).join(" ") + "...";
+            // eventsVm["allevents"].push(search_match[i]);
+            // extract short desp for each event
+
+        }
+
             eventsVm["allevents"] = search_match;
+
+            // $scope.$apply();
             //remove loading after we find the results
             eventsVm.search_loading = false;
         });//$scope.watch

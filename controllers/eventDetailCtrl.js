@@ -55,7 +55,7 @@
                 }
             }//for
 
-             console.log(eventDetail.event);
+            //  console.log(eventDetail.event);
             //  when user enters wrong url!
              if(eventDetail.event.description == undefined || eventDetail.event.description == null){
                  noDataFound();
