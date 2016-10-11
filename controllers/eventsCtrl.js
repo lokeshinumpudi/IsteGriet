@@ -76,7 +76,7 @@
 
          for (var i = 0; i < search_match.length; i++) {
 
-             console.log(search_match[i]["description"].length);
+            //  console.log(search_match[i]["description"].length);
              search_match[i]["short_description"] = search_match[i]["description"].trim().split(" ", 30).join(" ") + "...";
             // eventsVm["allevents"].push(search_match[i]);
             // extract short desp for each event

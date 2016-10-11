@@ -14,7 +14,8 @@
             link: link,
             scope: {
                 "dataSrc": "=sourcedata",
-                "iseventspage": "@iseventspage"
+                "iseventspage": "@iseventspage",
+                "ismelapage":"@ismelapage"
             }
         };
 
@@ -23,7 +24,10 @@
         function link(scope, element, attrs) {
             // scope.eventDetail:has the all the event 
             var data = scope.dataSrc;
+
+            
             function renderText(data){
+                // console.log(data);
                  //A little check to see if data is actually populated or not [atleast description,short_description]
             if (data.description == "" || data.description == null || data.description == undefined) {
                 // location.reload();
@@ -44,6 +48,7 @@
 
             // if its all events page render short description only
             if (attrs.iseventspage != "false") {
+                console.log();
                 angular.element(element[0].querySelector(".description"))[0].innerHTML = data.short_description;
                 return;
             }
@@ -59,7 +64,10 @@
             renderText(data);
             //Useful to update the short description during search made by the user
 
-            // watch for changes made through parent controller
+            // watch for changes made through parent controller[Dont in mela page!]
+            if(attrs.ismelapage == "true"){
+                return;
+            }
             scope.$watch("dataSrc", function (newVal, oldVal) {
                 if (!newVal) {
                     return;

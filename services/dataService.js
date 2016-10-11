@@ -976,7 +976,7 @@ The participants were given a choice to choose either from the topics of their o
         // Generate short description  and fulldate
         availablemultipledata.forEach(function (event) {
             event.forEach(function (each_event, index) {
-                // event[index]["short_description"] = each_event.description.trim().split(" ", 30).join(" ") + " ...";
+                 event[index]["short_description"] = each_event.description.trim().split(" ", 30).join(" ") + " ...";
                 event[index]["fulldate"] = returndate(event[index].year, event[index].month, event[index].day);
             });
         });
