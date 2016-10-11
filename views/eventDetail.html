@@ -47,26 +47,29 @@
 
 							</div>
 							<h4 class="center"></h4>
-							<div class="ui item" ng-show="eventDetail.event.registrationDetails.room_no">
-								<div class="ui blue basic label"> Room no:</div>
-								<small>{{eventDetail.event.registrationDetails.room_no}}</small>
+							<div class="registration-details">
+								<div class="ui item" ng-show="eventDetail.event.registrationDetails.room_no">
+									<div class="ui blue basic label"> Room no:</div>
+									<small>{{eventDetail.event.registrationDetails.room_no}}</small>
+								</div>
+
+								<div class="ui item" ng-show="eventDetail.event.registrationDetails.timings">
+									<div class="ui blue basic label"> Timings:</div>
+									<small>{{eventDetail.event.registrationDetails.timings}}</small>
+
+								</div>
+
+								<!--seats-->
+								<div class="ui item" ng-show="eventDetail.event.registrationDetails.seats_available">
+									<div class="ui blue basic label"> Seats Available:</div>
+									<small>{{eventDetail.event.registrationDetails.seats_available}}</small>
+								</div>
+								<div class="ui item" ng-show="eventDetail.event.registrationDetails.contact_no">
+									<div class="ui blue basic label">Contact:</div>
+									<small> {{eventDetail.event.registrationDetails.contact_no}}</small>
+								</div>
 							</div>
 
-							<div class="ui item" ng-show="eventDetail.event.registrationDetails.timings">
-								<div class="ui blue basic label"> Timings:</div>
-								<small>{{eventDetail.event.registrationDetails.timings}}</small>
-
-							</div>
-
-							<!--seats-->
-							<div class="ui item" ng-show="eventDetail.event.registrationDetails.seats_available">
-								<div class="ui blue basic label"> Seats Available:</div>
-								<small>{{eventDetail.event.registrationDetails.seats_available}}</small>
-							</div>
-							<div class="ui item" ng-show="eventDetail.event.registrationDetails.contact_no">
-								<div class="ui blue basic label">Contact:</div>
-								<small> {{eventDetail.event.registrationDetails.contact_no}}</small>
-							</div>
 
 							<div class="ui divider"></div>
 							<!--seats end-->
@@ -89,7 +92,7 @@
 			</div>
 
 
-			
+
 
 
 
@@ -98,10 +101,10 @@
 	</div>
 
 </div>
-    <!--error page to show-->
+<!--error page to show-->
 
 
-    <div class="ui very padded raised segment center" ng-show="eventDetail.notFound">
-        <p>Oops page not found! Try reloading.</p>
-        <button class="ui button" ng-click="eventDetail.tryreloading()">reload</button>
-    </div>
+<div class="ui very padded raised segment center" ng-show="eventDetail.notFound">
+	<p>Oops page not found! Try reloading.</p>
+	<button class="ui button" ng-click="eventDetail.tryreloading()">reload</button>
+</div>
