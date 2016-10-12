@@ -16,7 +16,7 @@
                 Next event
             </div>
         </div>-->
-		<a href="" class="ui red ribbon label"> {{eventDetail.event.month}} {{eventDetail.event.day}} {{eventDetail.event.year}}</a>
+		<a href="" class="ui primary-color ribbon label"> {{eventDetail.event.month}} {{eventDetail.event.day}} {{eventDetail.event.year}}</a>
 
 		<h2 class="ui header center">
 			{{eventDetail.event.title}}
@@ -35,7 +35,7 @@
 				<div class="notification">
 
 					<!--this will be the notification dates-->
-					<div class="ui header">
+					<div class="ui header ">
 
 
 						<div class="ui list">
@@ -49,23 +49,23 @@
 							<h4 class="center"></h4>
 							<div class="registration-details">
 								<div class="ui item" ng-show="eventDetail.event.registrationDetails.room_no">
-									<div class="ui blue basic label"> Room no:</div>
+									<div class="ui primary-registration basic label"> Room no:</div>
 									<small>{{eventDetail.event.registrationDetails.room_no}}</small>
 								</div>
 
 								<div class="ui item" ng-show="eventDetail.event.registrationDetails.timings">
-									<div class="ui blue basic label"> Timings:</div>
+									<div class="ui primary-registration basic label"> Timings:</div>
 									<small>{{eventDetail.event.registrationDetails.timings}}</small>
 
 								</div>
 
 								<!--seats-->
 								<div class="ui item" ng-show="eventDetail.event.registrationDetails.seats_available">
-									<div class="ui blue basic label"> Seats Available:</div>
+									<div class="ui primary-registration basic label"> Seats Available:</div>
 									<small>{{eventDetail.event.registrationDetails.seats_available}}</small>
 								</div>
 								<div class="ui item" ng-show="eventDetail.event.registrationDetails.contact_no">
-									<div class="ui blue basic label">Contact:</div>
+									<div class="ui primary-registration basic label">Contact:</div>
 									<small> {{eventDetail.event.registrationDetails.contact_no}}</small>
 								</div>
 							</div>

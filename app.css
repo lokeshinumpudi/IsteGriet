@@ -3,12 +3,19 @@
 .burgundy {
     color: #800020;
 }
-.metallic-seaweed{
+
+.metallic-seaweed {
     color: #0C7489;
 }
-.selective-yellow{
+
+.selective-yellow {
     color: #FCBA04;
 }
+
+.very-pale-yellow{
+   color: #F3FFBD;
+}
+
 
 /*Colors*/
 
@@ -396,13 +403,39 @@
     position: relative;
 }
 
-.home-events-showcase .ui.cards>.card>.content>.header {
-    color: #800020 !important;
+
+/*colored headers*/
+
+.home-events-showcase .ui.cards>.teal.card>.content>.header {
+    color: #009c95 !important;
 }
+
+.home-events-showcase .ui.cards>.blue.card>.content>.header {
+    color: #2185D0 !important;
+}
+
+.home-events-showcase .ui.cards>.violet.card>.content>.header {
+    color: #6435C9 !important;
+}
+
+.home-events-showcase .ui.cards>.green.card>.content>.header {
+    color: #16ab39 !important;
+}
+
+.home-events-showcase .ui.cards>.yellow.card>.content>.header {
+    color: #FBBD08 !important;
+}
+
+.home-events-showcase .ui.cards>.black.card>.content>.header {
+    color: #27292a !important;
+}
+
+
+/*colored headers end*/
 
 .home-events-showcase .ui.cards>.card>.content>.meta {
     /*color: #800020 !important;*/
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
     font-size: 0.8em;
 }
 
@@ -507,6 +540,7 @@
     text-align: center;
     position: relative;
     top: 12px;
+    color: #8B1734  ;
 }
 
 .events-banner-left p {}
@@ -520,6 +554,42 @@
     height: 400px;
     /*background-image: url(images/1.jpg);*/
 }
+
+.events-center{
+
+}
+
+
+
+ .events-center .ui.button{
+
+    color: #F3FFBD;
+    background-color: #8B1734;
+}
+
+.events-center .ui.items>.item>.content>.header,.more-events-header{
+    color: #8B1734 !important;
+}
+
+.width-control-more-events{
+
+}
+
+.width-control-more-events .ui.button{
+
+    color: #F3FFBD;
+    background-color: #8B1734;
+}
+
+.width-control-more-events .ui.items>.item>.content>.header{
+    color: #8B1734 !important;
+}
+
+/*.width-control-more-events .ui.items>.item>.meta{
+    font-size:0.8em;
+}*/
+
+
 
 .ui[class*="right fixed"].menu {
     top: 15% !important;
@@ -553,6 +623,25 @@
 .registration-details div.item {
     margin-bottom: 5px;
 }
+
+.eventDetail .primary-color.ribbon.label {
+    color: #800020;
+    border-color: #800020;
+    background-color: #F3FFBD;
+}
+
+.registration-details .primary-registration.label{
+    color: #800020;
+    border-color: #800020;
+    
+} 
+
+
+.notification .ui.divider{
+        border-top: 1px solid #F3FFBD !important;
+    border-bottom: 1px solid #8B1734 !important;
+}
+/*End event detail*/
 
 
 /*team*/
@@ -655,21 +744,32 @@
     margin: .875em 2em !important;
 }*/
 
-strong {
-    text-transform: uppercase;
+.eventDetail a {
+    /*text-transform: uppercase;*/
     font-size: 1.1em;
-    background-image: linear-gradient(to right, #F3FFBD 50%, #FF1654 50%);
-    color: #FF1654;
-    /* background-color:#F3FFBD;*/
+    background-image: linear-gradient(to right, #F3FFBD 50%, #8B1734 50%);
+    color: #8B1734;
+    border-bottom: 1px solid #800020;
     background-size: 200%;
     background-position: 0;
-    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-strong:hover {
+ .eventDetail a:hover {
     background-position: -100%;
     cursor: pointer;
     color: #F3FFBD;
+}
+
+.eventDetail .ui.header{
+    color: #800020;
+}
+
+strong {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    background-color: #F3FFBD;
+    color: #8B1734;
 }
 
 
