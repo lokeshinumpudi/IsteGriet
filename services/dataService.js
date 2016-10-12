@@ -751,7 +751,7 @@ The participants were given a choice to choose either from the topics of their o
                 "imagedirectory": "images/core/"
             }, {
                 "name": "V.Aishwarya",
-                "image_src": "aishwarya.jpg",
+                "image_src": "aishwarya.JPG",
                 "role": "Director(Technical)",
                 "fb_url": "https://www.facebook.com/aishwarya.varala?fref=ts",
                 "imagedirectory": "images/core/"
