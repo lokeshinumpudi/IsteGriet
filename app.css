@@ -663,7 +663,14 @@
     padding: 0 2%;
 }
 
-.team-top-section>ui.header {}
+.team-top-section{
+    position: relative;
+    top: 15px;
+}
+
+.team-top-section .ui.header {
+    color: #8B1734 !important; 
+}
 
 .team-top-section>.blockquote {}
 
@@ -701,6 +708,30 @@
     padding-bottom: 30px;
     padding-top: 100px;
 }
+
+.contact-address h3{
+    color: #8B1734 !important;
+}
+.contact-pad .ui.cards>.card>.content>.header{
+    color: #8B1734 !important;
+}
+
+.contact-address .ui.card>.content>.header{
+    color: #8B1734 !important;
+}
+
+.contact-pad .ui.buttons>.ui.button{
+    border-color: #8B1734 !important;
+    color: #8B1734 !important;
+        box-shadow: 0 0 0 1px #8B1734 inset,0 0 0 0 #8B1734 inset !important;
+}
+
+
+.address-contacts .ui.label{
+    color: #F3FFBD !important;
+    background-color: #800020 !important;
+}
+
 
 .address {
     padding: 1em;
@@ -782,6 +813,10 @@ strong {
     margin-top: 20px;
 }
 
+.about h3{
+    color : #8B1734;
+}
+
 .blockquote {
     page-break-inside: avoid;
     padding: 0.5rem 1rem;
@@ -800,3 +835,6 @@ strong {
 .blockquote-footer::before {
     content: "\2014 \00A0";
 }
+
+
+/**/
