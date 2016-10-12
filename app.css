@@ -12,8 +12,8 @@
     color: #FCBA04;
 }
 
-.very-pale-yellow{
-   color: #F3FFBD;
+.very-pale-yellow {
+    color: #F3FFBD;
 }
 
 
@@ -540,7 +540,7 @@
     text-align: center;
     position: relative;
     top: 12px;
-    color: #8B1734  ;
+    color: #8B1734;
 }
 
 .events-banner-left p {}
@@ -555,41 +555,33 @@
     /*background-image: url(images/1.jpg);*/
 }
 
-.events-center{
+.events-center {}
 
-}
-
-
-
- .events-center .ui.button{
-
+.events-center .ui.button {
     color: #F3FFBD;
     background-color: #8B1734;
 }
 
-.events-center .ui.items>.item>.content>.header,.more-events-header{
+.events-center .ui.items>.item>.content>.header,
+.more-events-header {
     color: #8B1734 !important;
 }
 
-.width-control-more-events{
+.width-control-more-events {}
 
-}
-
-.width-control-more-events .ui.button{
-
+.width-control-more-events .ui.button {
     color: #F3FFBD;
     background-color: #8B1734;
 }
 
-.width-control-more-events .ui.items>.item>.content>.header{
+.width-control-more-events .ui.items>.item>.content>.header {
     color: #8B1734 !important;
 }
+
 
 /*.width-control-more-events .ui.items>.item>.meta{
     font-size:0.8em;
 }*/
-
-
 
 .ui[class*="right fixed"].menu {
     top: 15% !important;
@@ -630,17 +622,17 @@
     background-color: #F3FFBD;
 }
 
-.registration-details .primary-registration.label{
+.registration-details .primary-registration.label {
     color: #800020;
     border-color: #800020;
-    
-} 
+}
 
-
-.notification .ui.divider{
-        border-top: 1px solid #F3FFBD !important;
+.notification .ui.divider {
+    border-top: 1px solid #F3FFBD !important;
     border-bottom: 1px solid #8B1734 !important;
 }
+
+
 /*End event detail*/
 
 
@@ -663,13 +655,13 @@
     padding: 0 2%;
 }
 
-.team-top-section{
+.team-top-section {
     position: relative;
     top: 15px;
 }
 
 .team-top-section .ui.header {
-    color: #8B1734 !important; 
+    color: #8B1734 !important;
 }
 
 .team-top-section>.blockquote {}
@@ -709,29 +701,28 @@
     padding-top: 100px;
 }
 
-.contact-address h3{
-    color: #8B1734 !important;
-}
-.contact-pad .ui.cards>.card>.content>.header{
+.contact-address h3 {
     color: #8B1734 !important;
 }
 
-.contact-address .ui.card>.content>.header{
+.contact-pad .ui.cards>.card>.content>.header {
     color: #8B1734 !important;
 }
 
-.contact-pad .ui.buttons>.ui.button{
+.contact-address .ui.card>.content>.header {
+    color: #8B1734 !important;
+}
+
+.contact-pad .ui.buttons>.ui.button {
     border-color: #8B1734 !important;
     color: #8B1734 !important;
-        box-shadow: 0 0 0 1px #8B1734 inset,0 0 0 0 #8B1734 inset !important;
+    box-shadow: 0 0 0 1px #8B1734 inset, 0 0 0 0 #8B1734 inset !important;
 }
 
-
-.address-contacts .ui.label{
+.address-contacts .ui.label {
     color: #F3FFBD !important;
     background-color: #800020 !important;
 }
-
 
 .address {
     padding: 1em;
@@ -786,13 +777,13 @@
     transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
- .eventDetail a:hover {
+.eventDetail a:hover {
     background-position: -100%;
     cursor: pointer;
     color: #F3FFBD;
 }
 
-.eventDetail .ui.header{
+.eventDetail .ui.header {
     color: #800020;
 }
 
@@ -813,8 +804,8 @@ strong {
     margin-top: 20px;
 }
 
-.about h3{
-    color : #8B1734;
+.about h3 {
+    color: #8B1734;
 }
 
 .blockquote {
@@ -837,4 +828,4 @@ strong {
 }
 
 
-/**/
+/*The End    ---Styled by lokis ---*/

@@ -793,7 +793,7 @@ The participants were given a choice to choose either from the topics of their o
                 "imagedirectory": "images/core/"
             }, {
                 "name": "Abid Sheik",
-                "image_src": "abid.jpg",
+                "image_src": "abid.JPG",
                 "role": "Creative Head",
                 "fb_url": "https://www.facebook.com/shaiks13?fref=ts",
                 "imagedirectory": "images/core/"
@@ -839,7 +839,7 @@ The participants were given a choice to choose either from the topics of their o
                 "imagedirectory": "images/core/"
             }, {
                 "name": "Robin Phillip",
-                "image_src": "robin.jpg",
+                "image_src": "robin.JPG",
                 "role": "Resource Manager",
                 "fb_url": "https://www.facebook.com/",
                 "imagedirectory": "images/core/"
@@ -886,7 +886,7 @@ The participants were given a choice to choose either from the topics of their o
                 "imagedirectory": "images/core/"
             }, {
                 "name": "V.Aishwarya",
-                "image_src": "aishwarya.jpg",
+                "image_src": "aishwarya.JPG",
                 "role": "Vice Event Manager",
                 "fb_url": "https://www.facebook.com/aishwarya.varala?fref=ts",
                 "imagedirectory": "images/core/"
@@ -910,7 +910,7 @@ The participants were given a choice to choose either from the topics of their o
                 "imagedirectory": "images/core/"
             }, {
                 "name": "K.Naimisha",
-                "image_src": "naimisha.jpg",
+                "image_src": "naimisha.JPG",
                 "role": "Event Logistics",
                 "fb_url": "https://www.facebook.com/",
                 "imagedirectory": "images/core/"
@@ -940,7 +940,7 @@ The participants were given a choice to choose either from the topics of their o
 
             {
                 "name": "T.Raghavendra",
-                "image_src": "raghavendra.jpg",
+                "image_src": "Raghavendra.jpg",
                 "role": "Tech Lead (Civil)",
                 "fb_url": "https://www.facebook.com/thoude.raghavendra?fref=ts",
                 "imagedirectory": "images/core/"
