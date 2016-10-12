@@ -739,13 +739,13 @@ The participants were given a choice to choose either from the topics of their o
                 "imagedirectory": "images/core/"
             }, {
                 "name": "T.Raghavendra",
-                "image_src": "Raghavendra.jpg",
+                "image_src": "raghavendra.jpg",
                 "role": "Treasurer",
                 "fb_url": "https://www.facebook.com/thoude.raghavendra?fref=ts",
                 "imagedirectory": "images/core/"
             }, {
                 "name": "K.Naimisha",
-                "image_src": "naimisha.jpg",
+                "image_src": "naimisha.JPG",
                 "role": "Director(Events)",
                 "fb_url": "https://www.facebook.com/",
                 "imagedirectory": "images/core/"
@@ -940,7 +940,7 @@ The participants were given a choice to choose either from the topics of their o
 
             {
                 "name": "T.Raghavendra",
-                "image_src": "Raghavendra.jpg",
+                "image_src": "raghavendra.jpg",
                 "role": "Tech Lead (Civil)",
                 "fb_url": "https://www.facebook.com/thoude.raghavendra?fref=ts",
                 "imagedirectory": "images/core/"
