@@ -1,31 +1,46 @@
+/*Colors*/
+
+.burgundy {
+    color: #800020;
+}
+.metallic-seaweed{
+    color: #0C7489;
+}
+.selective-yellow{
+    color: #FCBA04;
+}
+
+/*Colors*/
 
 
 /*top nav styling*/
 
 .main-menu {
     padding: 8px;
-    background-color: #1b1c1d;
-    color: #fff;
+    background-color: #800020;
+    color: #FBFEF9;
 }
 
 .main-menu .ui.secondary.menu .item {
     margin-left: 30px;
-    color: white;
-}
-.main-menu .ui.secondary.menu .active.item {
-    background-color: #fff;
-    color: #1b1c1d;
+    color: #FBFEF9;
 }
 
+.main-menu .ui.secondary.menu .active.item {
+    color: #800020;
+    background-color: #FBFEF9;
+}
+
+
 /*top nav styling end*/
+
+
 /*:target {
     background-color: burlywood;
     color: white;
     border-radius: 10px;
     display: none;
 }*/
-
-
 
 .active {
     display: block !important;
@@ -182,6 +197,8 @@
     }
     .width-control {
         padding: 0 4%;
+        top: 15px;
+        position: relative
     }
     .content-description {
         padding: 1%;
@@ -211,6 +228,9 @@
     }
     .recent-events-header {
         padding: 2px !important;
+    }
+    .home-events-showcase {
+        margin-top: 25px !important;
     }
     .hometitles .content {
         font-size: 16px !important;
@@ -256,8 +276,6 @@
     }
     /*events page*/
     /*event Detail start*/
-
-
     .eventDetail>.ui.segment {
         margin-left: 0.5em !important;
         margin-right: 0.5em !important;
@@ -275,11 +293,9 @@
         background-size: contain !important;
         background-repeat: no-repeat !important;
     }
-
-    .registration-details{
+    .registration-details {
         text-align: justify;
     }
-
     /*.registration-details div.item{
         margin-bottom: 5px;
     }*/
@@ -300,18 +316,16 @@
         display: inline-block !important;
     }
     /*team page end*/
-
     /*about page*/
-
-    .about p{
+    .about p {
         padding: 12px !important;
         font-family: cursive;
     }
     /*about end*/
-
     /*contact page*/
     .contact-pad {
         left: 10% !important;
+        top: 15px;
     }
     .address {
         /*padding: 1em;*/
@@ -359,6 +373,7 @@
     font-size: 37px;
     font-weight: 600;
     text-align: center;
+    color: #800020;
 }
 
 .centerAttraction h3 {
@@ -371,6 +386,24 @@
 
 .recent-events-header {
     padding: 14px;
+}
+
+.recent-events-header>.ui.header {
+    color: #800020;
+}
+
+.home-events-showcase {
+    position: relative;
+}
+
+.home-events-showcase .ui.cards>.card>.content>.header {
+    color: #800020 !important;
+}
+
+.home-events-showcase .ui.cards>.card>.content>.meta {
+    /*color: #800020 !important;*/
+    color: rgba(0,0,0,0.8);
+    font-size: 0.8em;
 }
 
 .centerAttraction .hometitles {
@@ -453,10 +486,6 @@
     border-color: none !important;
 }
 
-.home-events-showcase {
-    position: relative;
-}
-
 
 /*home end*/
 
@@ -520,9 +549,10 @@
     margin-left: 2em;
     margin-right: 2em;
 }
-.registration-details div.item{
-        margin-bottom: 5px;
-    }
+
+.registration-details div.item {
+    margin-bottom: 5px;
+}
 
 
 /*team*/
@@ -544,10 +574,11 @@
     padding: 0 2%;
 }
 
+.team-top-section>ui.header {}
 
-/*.ui.six.cards>.card {
-    width: calc(13.666667% - 1.5em) !important;
-}*/
+.team-top-section>.blockquote {}
+
+.team-top-section>p {}
 
 .each-person>small {
     display: block;
