@@ -108,26 +108,6 @@ Winners of the event was the team of J.Vivek(ECE-3) and G.Uttej Reddy(EEE-3).",
                     "contact_no": "9014074488",
                 }
 
-            }, {
-                "title": "Tech Zap 2015",
-                "description": " As part of rapid internet growth in the last 10 years, most of the events are now happening online like webinars etc. The ISTE Student Chapter of GRIET has as many as 1000 viewers on its facebook page and its website. To encourage students to use the internet in a resourceful manner , a quiz competition' Tech Zap ' was conducted online.The quiz was created using google forms and responses were collected. The quiz started at 7:30 pm and within 30 minutes more than 80 responses were collected.",
-                "date_full": "",
-                "year": "2015",
-                "month": "JAN",
-                "day": "28",
-                "title_img_src": "title4.jpg",
-                "event_link": "#/event/Online_Quiz",
-                "gallery": ["title10.jpg"],
-                "imagedirectory": "images/",
-                "on_center_page": true,
-                "hash": "uniquetothispage",
-                "test_random_code": "",
-                "registrationDetails": {
-                    "room_no": "",
-                    "timings": "7:30pm",
-                    "contact_no": "9014074488",
-                }
-
             },
             //event5
             {

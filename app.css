@@ -754,8 +754,12 @@
     margin-left: 4em;
 }
 
+.address-right a {
+    height: 288px !important;
+}
 .address-right img {
     height: 288px !important;
+    width: 100%;
 }
 
 .contact-address .ui.segments>.segment {
