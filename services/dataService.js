@@ -441,7 +441,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "11",
                 "title_img_src": "title18.jpg",
                 "event_link": "#/event/industrial_visit_rttc",
-                "gallery": ["title18.jpg","g71.jpg","g72.jpg","g73.jpg"],
+                "gallery": ["title18.jpg", "g71.jpg", "g72.jpg", "g73.jpg"],
                 "imagedirectory": "images/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -976,7 +976,7 @@ The participants were given a choice to choose either from the topics of their o
         // Generate short description  and fulldate
         availablemultipledata.forEach(function (event) {
             event.forEach(function (each_event, index) {
-                 event[index]["short_description"] = each_event.description.trim().split(" ", 30).join(" ") + " ...";
+                event[index]["short_description"] = each_event.description.trim().split(" ", 30).join(" ") + " ...";
                 event[index]["fulldate"] = returndate(event[index].year, event[index].month, event[index].day);
             });
         });
@@ -994,7 +994,7 @@ The participants were given a choice to choose either from the topics of their o
         });
         // eND SORTING 
 
-         // Well have a hard copy of all the events data for use in search
+        // Well have a hard copy of all the events data for use in search
         for (var i = 0; i < allEvents.length; i++) {
             searchData.push(allEvents[i]);
         }
@@ -1010,7 +1010,7 @@ The participants were given a choice to choose either from the topics of their o
             event["fulldate"] = returndate(event.year, event.month, event.day);
         });
 
-       
+
 
 
         bolds.forEach(function (eachbold) {

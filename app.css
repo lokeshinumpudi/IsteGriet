@@ -28,13 +28,12 @@
     color: #FBFEF9;
 }
 
-.home-tab{
+.home-tab {
     background-color: #800020 !important;
-    
     top: -8px;
 }
 
-.home-tab img{
+.home-tab img {
     border-radius: 50px;
 }
 
@@ -571,6 +570,7 @@
     color: #F3FFBD;
     background-color: #8B1734;
 }
+
 .events-banner-left .ui.button {
     color: #F3FFBD !important;
     background-color: #8B1734 !important;
