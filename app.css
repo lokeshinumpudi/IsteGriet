@@ -571,6 +571,10 @@
     color: #F3FFBD;
     background-color: #8B1734;
 }
+.events-banner-left .ui.button {
+    color: #F3FFBD !important;
+    background-color: #8B1734 !important;
+}
 
 .events-center .ui.items>.item>.content>.header,
 .more-events-header {
