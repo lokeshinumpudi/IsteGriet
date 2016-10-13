@@ -28,6 +28,16 @@
     color: #FBFEF9;
 }
 
+.home-tab{
+    background-color: #800020 !important;
+    
+    top: -8px;
+}
+
+.home-tab img{
+    border-radius: 50px;
+}
+
 .main-menu .ui.secondary.menu .item {
     margin-left: 30px;
     color: #FBFEF9;

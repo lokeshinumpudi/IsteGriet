@@ -342,7 +342,7 @@ The participants were given a choice to choose either from the topics of their o
                 "date_full": "",
                 "year": "2016",
                 "month": "FEB",
-                "day": "12",
+                "day": "11",
                 "title_img_src": "title14.jpg",
                 "event_link": "#/event/Arduino_session",
                 "gallery": ["g46.jpg", "g48.jpg", "g47.jpg", "g49.jpg", "g50.jpg", "g51.jpg"],
@@ -441,7 +441,7 @@ The participants were given a choice to choose either from the topics of their o
                 "day": "11",
                 "title_img_src": "title18.jpg",
                 "event_link": "#/event/industrial_visit_rttc",
-                "gallery": ["title18.jpg"],
+                "gallery": ["title18.jpg","g71.jpg","g72.jpg","g73.jpg"],
                 "imagedirectory": "images/",
                 "on_center_page": true,
                 "hash": "uniquetothispage",
@@ -905,7 +905,7 @@ The participants were given a choice to choose either from the topics of their o
             {
                 "name": "Mansoor",
                 "image_src": "mansoor.jpg",
-                "role": "Public Relations",
+                "role": "Member Relations",
                 "fb_url": "https://www.facebook.com/sn.mansoor?fref=ts",
                 "imagedirectory": "images/core/"
             }, {
