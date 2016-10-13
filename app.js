@@ -9,7 +9,7 @@
 
     config.$insert = ['$routeProvider', '$locationProvider'];
 
-    function config($routeProvider,$locationProvider) {
+    function config($routeProvider, $locationProvider) {
 
         // Routes for our site
 
@@ -60,10 +60,13 @@
             })
             .otherwise('/')
 
+
+        // Needs heavy configuration on server side so do later!
+
         // remove the #/ in url
-        if (window.history && window.history.pushState) {
-            $locationProvider.html5Mode(true);
-        }
+        // if (window.history && window.history.pushState) {
+        //     $locationProvider.html5Mode(true);
+        // }
 
 
 

@@ -20,7 +20,7 @@
             
             for (var i = 0; i < $rootScope.events.length; i++) {
                 // fetch the data matching the current route
-                if ($rootScope.events[i]["event_link"] == "/event/" + $route.current.params.eventname) {
+                if ($rootScope.events[i]["event_link"] == "#/event/" + $route.current.params.eventname) {
                     eventDetail.event = $rootScope.events[i];
                 }
             }//for
@@ -52,7 +52,7 @@
 
 // fetch the data matching the current route
             for (var i = 0; i < AllEvents.length; i++) {
-                if (AllEvents[i]["event_link"] == "/event/" + $route.current.params.eventname) {
+                if (AllEvents[i]["event_link"] == "#/event/" + $route.current.params.eventname) {
                     eventDetail.event = AllEvents[i];
                    
                 }
