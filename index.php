@@ -103,7 +103,7 @@
 						<a href="https://twitter.com/istegrietsb" class="item"><i class="icon-twitter"></i></a>
 						<a href="mailto:istegrietsb@gmail.com" class="item"><i class="icon-mail"></i></a>
 						<a href="https://www.instagram.com/istegrietsb/?hl=en" class="item"><i class="icon-instagram"></i></a>
-						<a href="#/contact#contact-number" class="item"><i class="icon-phone"></i> </a>
+						<a href="#/contact#contactnumber" class="item"><i class="icon-phone"></i> </a>
 					</div>
 					<!--Social links-->
 				</div>
