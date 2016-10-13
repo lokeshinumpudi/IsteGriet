@@ -7,13 +7,14 @@
         .run(run)
         .controller('bodyCtrl', bodyCtrl);
 
-    config.$insert = ['$routeProvider'];
-    function config($routeProvider) {
+    config.$insert = ['$routeProvider', '$locationProvider'];
+
+    function config($routeProvider,$locationProvider) {
 
         // Routes for our site
 
         $routeProvider.
-            when('/', {
+        when('/', {
                 templateUrl: 'views/home.html',
                 controller: 'homeCtrl',
                 controllerAs: 'home',
@@ -59,8 +60,14 @@
             })
             .otherwise('/')
 
+        // remove the #/ in url
+        if (window.history && window.history.pushState) {
+            $locationProvider.html5Mode(true);
+        }
 
-    }//config
+
+
+    } //config
 
 
     run.$inject = ['isteData'];
@@ -72,6 +79,7 @@
 
 
     bodyCtrl.$inject = ['$scope', '$route']
+
     function bodyCtrl($scope, $route) {
         var bodyvm = this;
         bodyvm.x = true;
@@ -80,7 +88,7 @@
             bodyvm.activetab = current.activetab;
         });
 
-    }//bodyCtrl
+    } //bodyCtrl
 })(); //iife
 
 
