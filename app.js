@@ -76,10 +76,8 @@
     run.$inject = ['isteData'];
 
     function run(isteData) {
-
-
+        
     }
-
 
     bodyCtrl.$inject = ['$scope', '$route']
 
