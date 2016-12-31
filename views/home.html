@@ -74,12 +74,12 @@
 	<div class="home-events-showcase">
 		<div class="ui six stackable cards">
 
-			<a class="teal card" href="#/event/code_auction">
+			<a class="card" ng-class="recentEvent.color" ng-repeat="recentEvent in home.recentEvents" ng-href="{{recentEvent.event_link}}">
 				<div class="content">
-					<div class="header">Code Auction</div>
-					<div class="meta">28-SEPT-2016</div>
+					<div class="header">{{recentEvent.title}}</div>
+					<div class="meta">{{recentEvent.day}}-{{recentEvent.month}}-{{recentEvent.year}}</div>
 					<div class="description">
-						Coding along with Auctioning is awesome. Dont trust us??? Ummm.. then you need to join with us in Code Auction.
+						{{recentEvent.short_description}}
 					</div>
 				</div>
 				<!--<div class="extra content">
@@ -88,99 +88,7 @@
 				</div>-->
 			</a>
 
-			
-			
 			<!--each card-->
-
-
-			<a class="blue card" href="#/event/industrial_visit_rttc">
-				<div class="content">
-					<div class="header">Industrial Tour</div>
-					<div class="meta">11-AUG-2016</div>
-					<div class="description">
-						Dont miss the wonderful opprtunity to witness the real time applications by RTTC BSNL.
-					</div>
-				</div>
-				<!--<div class="extra content">
-					<p>Call : 9700989085</p>
-					<p>
-						<a href="https://www.facebook.com/">link</a>
-					</p>
-
-				</div>-->
-			</a>
-
-			<!--each card end-->
-
-			<a class="violet card" href="#/event/fast_and_furious">
-				<div class="content">
-					<div class="header">Fast And Furious</div>
-					<div class="meta">15-JULY-2016</div>
-					<div class="description">
-						Hola Mechanical Engineers...! Add a desgin to your dream automobiles and make a difference. 
-					</div>
-				</div>
-				<!--<div class="extra content">
-					<p>Call : 9700989085</p>
-					<p>
-						<a href="https://www.facebook.com/">link</a>
-					</p>
-
-				</div>-->
-			</a>
-			<a class="green card" href="#/event/Pic-O-mentry">
-				<div class="content">
-					<div class="header">Pic-O-mentry</div>
-					<div class="meta">25-FEB-2016 - 4-MARCH-2016</div>
-					<div class="description">
-						Wake up the creative writing skills in you,Choose a picture and show your skills. <br>Get your stories published in Metro India, The Hindhu<br>
-						
-					</div>
-				</div>
-				<!--<div class="extra content">
-					<p>Call : 97000989085</p>
-					<p>
-						<a href="https://www.facebook.com/">link</a>
-					</p>
-
-				</div>-->
-			</a>
-			<a class="yellow card" href="#/event/Digital_Marketing">
-				<div class="content">
-					<div class="header">Digital Marketing</div>
-					<div class="meta">13-FEB-2016</div>
-					<div class="description">
-					Well we here provides you with a platform to quench your thirst of curiosity with the digital marketing sessions!</p> 
-					</div>
-				</div>
-				<!--<div class="extra content">
-					<p>Call : 9908142041</p>
-					<p>
-						<a href="https://www.facebook.com/">link</a>
-					</p>
-
-				</div>-->
-			</a>
-
-			<a class="black card" href="#/event/Arduino_session">
-				<div class="content">
-					<div class="header">Arduino Session</div>
-					<div class="meta">11-FEB-2016</div>
-					<div class="description">
-						Arduino changed the whole hardware eco-system by showing how real hardware works. Join and explore the arduino world. Free hands on Session. 
-					</div>
-				</div>
-				<!--<div class="extra content">
-					<p>Call : 9908142041</p>
-					<p>
-						<a href="https://www.facebook.com/">link</a>
-					</p>
-
-				</div>-->
-			</a>
-			
-
-
 		</div>
 		<!--cards end-->
 	</div>

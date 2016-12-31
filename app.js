@@ -97,4 +97,4 @@
 
 
 // Minify steps
-// uglifyjs  app.js services/dataService.js directives/renderDescription.js controllers/homeCtrl.js controllers/eventsCtrl.js controllers/eventDetailCtrl.js controllers/teamCtrl.js controllers/aboutCtrl.js controllers/melaCtrl.js controllers/contactCtrl.js --output app.min.js
+// uglifyjs   app.js templatesCache/templates.js  services/dataService.js directives/renderDescription.js controllers/homeCtrl.js controllers/eventsCtrl.js controllers/eventDetailCtrl.js controllers/teamCtrl.js controllers/aboutCtrl.js controllers/melaCtrl.js controllers/contactCtrl.js --output app.min.js

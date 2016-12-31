@@ -5,11 +5,12 @@
         .module('ISTE')
         .factory('isteData', isteData);
 
-    isteData.$inject = ['$rootScope', '$http',"$q"];
+    isteData.$inject = ['$rootScope', '$http', "$q"];
 
-    function isteData($rootScope, $http,$q) {
+    function isteData($rootScope, $http, $q) {
 
         var fbref = "https://istegriet-bb890.firebaseio.com/";
+        var tempResCache = null;
 
         var allEvents = [];
         var workDoneByService = false;
@@ -542,7 +543,7 @@
             return $http.get(fbref + "data/allEvents.json");
         }
 
-        function AllEventsData(){
+        function AllEventsData() {
 
             var d = $q.defer();
             d.resolve(allEvents);
@@ -551,8 +552,11 @@
             return d.promise;
         }
 
+
+
         //get data while in initial page
         getAllEvents().then(function (res) {
+            tempResCache = res;
             allEvents = cleanInput(res);
             // //temp cache the results
             $rootScope["events"] = allEvents;
@@ -572,7 +576,7 @@
         }
 
         function doWork(allEvents, fromwhere) {
-            
+
             var reg = new RegExp();
             var availablesingledata = [centerEvent, mela_main];
             var availablemultipledata = [allEvents, mela_rest];
@@ -668,7 +672,7 @@
             }); //bolds for each
 
             //mark work done by service
-            workDoneByService= true;
+            workDoneByService = true;
 
         }; //doWork  only after fetching server data
 
@@ -676,9 +680,49 @@
         //call do Work anyway
         // doWork([]);
 
-        function isWorkAlreadyDone(){
+        function isWorkAlreadyDone() {
             return workDoneByService === true;
         }
+
+        //return the (no) of latest events
+        function getRecentEvents(no) {
+            var colors = ["teal","red","blue","yellow","violet","brown"]
+            var no = no || 6;
+            var recentEvents;
+            var deferred = $q.defer();
+            $http.get(fbref + "data/allEvents.json").then(function (res) {
+                if (res.status == 200) {
+                    var cleanedData = cleanInput(res);
+                    cleanedData.forEach(function (event) {
+                        event["fulldate"] = returndate(event.year, event.month, event.day);
+                        event["short_description"] = event.description.trim().split(" ", 20).join(" ");
+                        
+
+                    });
+                    //sort
+                    cleanedData.sort(function (a, b) {
+                        if (a.fulldate < b.fulldate) {
+                            return 1;
+                        } else if (a.fulldate > b.fulldate) {
+                            return -1;
+                        }
+                        return 0;
+                    }); //sort end
+                    // console.log(cleanedData);
+                    recentEvents = cleanedData.splice(0, no);
+
+                    recentEvents.forEach(function (e,index){
+                        e.color = colors[index];
+                    });
+                    deferred.resolve(recentEvents);
+                } //res.status -if
+            }, function (err) {
+
+                deferred.reject(err);
+            }); //$http get
+
+            return deferred.promise;
+        } //getRecentEvents
 
         var service = {
             centerEvent: getCenterEvent,
@@ -686,8 +730,9 @@
             doWork: doWork,
             cleanInput: cleanInput,
 
-            returndate:returndate,
-            isWorkAlreadyDone:isWorkAlreadyDone,
+            returndate: returndate,
+            isWorkAlreadyDone: isWorkAlreadyDone,
+            getRecentEvents: getRecentEvents,
 
             allEvents: getAllEvents,
             names16: names16,
