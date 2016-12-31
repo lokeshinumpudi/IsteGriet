@@ -25,6 +25,10 @@
             // scope.eventDetail:has the all the event 
             var data = scope.dataSrc;
 
+            // console.log(data);
+
+           
+
             
             function renderText(data){
                 // console.log(data);
@@ -48,7 +52,8 @@
 
             // if its all events page render short description only
             if (attrs.iseventspage != "false") {
-                console.log();
+                // console.log(data["short_description"]);
+                
                 angular.element(element[0].querySelector(".description"))[0].innerHTML = data.short_description;
                 return;
             }

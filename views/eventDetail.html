@@ -1,6 +1,5 @@
 <div class="eventDetail" ng-hide="eventDetail.notFound">
-
-	<div class="ui segment">
+	<div class="ui segment" ng-if="eventDetail.event.title">
 		<!--left rail-->
 		<!--
         <div class="ui left internal attached rail">
@@ -17,34 +16,23 @@
             </div>
         </div>-->
 		<a href="" class="ui primary-color ribbon label"> {{eventDetail.event.month}} {{eventDetail.event.day}} {{eventDetail.event.year}}</a>
-
 		<h2 class="ui header center">
 			{{eventDetail.event.title}}
 		</h2>
 		<div class="ui stackable  grid">
 			<div class=" twelve wide column">
-
 				<render-description sourcedata="eventDetail.event" iseventspage="false">
-
 				</render-description>
-
-
 			</div>
 			<div class="four wide column">
-
 				<div class="notification">
-
 					<!--this will be the notification dates-->
 					<div class="ui header ">
-
-
 						<div class="ui list">
 							<div class="ui header center">
 								<strong>Registration Details</strong>
 							</div>
-
 							<div class="ui  divider ">
-
 							</div>
 							<h4 class="center"></h4>
 							<div class="registration-details">
@@ -52,13 +40,10 @@
 									<div class="ui primary-registration basic label"> Room no:</div>
 									<small>{{eventDetail.event.registrationDetails.room_no}}</small>
 								</div>
-
 								<div class="ui item" ng-show="eventDetail.event.registrationDetails.timings">
 									<div class="ui primary-registration basic label"> Timings:</div>
 									<small>{{eventDetail.event.registrationDetails.timings}}</small>
-
 								</div>
-
 								<!--seats-->
 								<div class="ui item" ng-show="eventDetail.event.registrationDetails.seats_available">
 									<div class="ui primary-registration basic label"> Seats Available:</div>
@@ -69,41 +54,26 @@
 									<small> {{eventDetail.event.registrationDetails.contact_no}}</small>
 								</div>
 							</div>
-
-
 							<div class="ui divider"></div>
 							<!--seats end-->
-
 						</div>
-
 					</div>
-
 				</div>
-
 			</div>
-
-
 			<div class="ui divider horizontal header">
 				<a ng-href="{{eventDetail.event.event_link}}#gallery"><strong>Gallery</strong></a>
 			</div>
-
 			<div id="gallery" class="ui medium images gallery-eventDetail">
 				<img ng-repeat="imagesrc in eventDetail.event.gallery" ng-src="{{eventDetail.event.imagedirectory}}{{imagesrc}}" alt="">
 			</div>
-
-
-
-
-
-
 		</div>
-
 	</div>
-
+	<!--Loading service-->
+	<div ng-if="!eventDetail.event.title" class="article-loading-container" style="padding: 200px;position: relative;top: 30px;">
+		<div class="ui big active centered inline loader"> </div>
+	</div>
 </div>
 <!--error page to show-->
-
-
 <div class="ui very padded raised segment center" ng-show="eventDetail.notFound">
 	<p>Oops page not found! Try reloading.</p>
 	<button class="ui button" ng-click="eventDetail.tryreloading()">reload</button>

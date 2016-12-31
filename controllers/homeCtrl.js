@@ -12,16 +12,16 @@
         home.name = "ISTE"
             // var divs = document.getElementsByClassName("title");
 
-        var count = 1;
+        // var count = 1;
 
-        home.title1 = false;
-        home.hidetitle1 = true;
+        // home.title1 = false;
+        // home.hidetitle1 = true;
 
-        home.title2 = false;
-        home.hidetitle2 = true;
+        // home.title2 = false;
+        // home.hidetitle2 = true;
 
-        home.title3 = true;
-        home.hidetitle3 = false;
+        // home.title3 = true;
+        // home.hidetitle3 = false;
 
         // $interval(function () {
         //     for (var i = 1; i < 4; i++) {
