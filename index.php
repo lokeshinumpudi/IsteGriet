@@ -1,6 +1,5 @@
 <!DOCTYPE html/>
 <html lang="en" ng-app="ISTE">
-
 <head>
 	<!--<base href="/">-->
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,7 +23,75 @@
 	<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
 	<meta name="theme-color" content="#8B1734">
 	<style type="text/css">
-
+		@media screen and (max-width:418px) {
+			.announcement-bar {
+				width: 90% !important;
+				left: initial !important;
+				margin-bottom: -40px !important;
+				margin-left: 0 !important;
+				font-size: 16px !important;
+			}
+			.announcement-bar-slides {
+				width: 100% !important;
+				height: 100px !important;
+			}
+			.announcement-bar-slide {
+				width: 100% !important;
+				padding: 1em !important;
+			}
+			.announcement-bar-slide .button{
+				display: block !important;
+				top: 5px;
+				margin-left: initial !important;
+			}
+		}
+		.announcement-bar {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 752px;
+			margin-bottom: -52px;
+			margin-left: -376px;
+			font-size: 18px;
+		}
+		.announcement-bar-slides {
+			position: relative;
+			overflow: hidden;
+			width: 752px;
+			height: 104px;
+			text-align: center;
+			color: #607D8B;
+			background: #fff;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+			box-sizing: border-box;
+		}
+		.announcement-bar-slide {
+			bottom: 0;
+			box-sizing: border-box;
+			height: inherit;
+			left: 0;
+			margin-bottom: -104px;
+			opacity: 0;
+			padding: 36px;
+			position: absolute;
+			right: 0;
+			-webkit-transition: all .8s;
+			transition: all .8s;
+			width: 752px;
+			z-index: 1;
+		}
+		.announcement-bar-slide .button {
+			position: relative;
+			margin-left: 37px ;
+		}
+		.is-visible {
+			display: block !important;
+		}
+		.announcement-bar-slide.is-visible {
+			z-index: 2;
+			opacity: 1;
+			margin-bottom: 0;
+		}
 	</style>
 	<!--Defer loading css-->
 	<link rel="stylesheet" type="text/css" href="libsmin/semantic.min.css">
@@ -33,13 +100,12 @@
 	<noscript>
 		<link rel="stylesheet" href="libsmin/semantic.min.css">
 	</noscript>-->
-	<link rel="preload" href="app.min.css" as="style" onload="this.rel='stylesheet'">
+	<link rel="preload" href="app.css" as="style" onload="this.rel='stylesheet'">
 	<noscript>
-		<link rel="stylesheet" href="app.min.css">
+		<link rel="stylesheet" href="app.css">
 	</noscript>
 	<!--Defer loading-->
 </head>
-
 <body ng-controller="bodyCtrl as bodyvm">
 	<!--menu bar-->
 	<!--top menu start-->
@@ -72,7 +138,6 @@
 						<i class="search link icon"></i>
 					</div>
 				</div>
-
 			</div>-->
 		</div>
 	</div>
@@ -145,13 +210,11 @@
 					var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
 					ref = refs[refs.length - 1];
 				}
-
 				var sheets = doc.styleSheets;
 				ss.rel = "stylesheet";
 				ss.href = href;
 				// temporarily set media to something inapplicable to ensure it'll fetch without blocking render
 				ss.media = "only x";
-
 				// wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
 				function ready(cb) {
 					if (doc.body) {
@@ -180,14 +243,12 @@
 						onloadcssdefined(cb);
 					});
 				};
-
 				function loadCB() {
 					if (ss.addEventListener) {
 						ss.removeEventListener("load", loadCB);
 					}
 					ss.media = media || "all";
 				}
-
 				// once loaded, set link's media back to `all` so that the stylesheet applies once it loads
 				if (ss.addEventListener) {
 					ss.addEventListener("load", loadCB);
@@ -203,7 +264,6 @@
 				w.loadCSS = loadCSS;
 			}
 		}(typeof global !== "undefined" ? global : this));
-
 		(function (w) {
 			// rel=preload support test
 			if (!w.loadCSS) {
@@ -217,7 +277,6 @@
 					return false;
 				}
 			};
-
 			// loop preload links and fetch using loadCSS
 			rp.poly = function () {
 				var links = w.document.getElementsByTagName("link");
@@ -229,7 +288,6 @@
 					}
 				}
 			};
-
 			// if link[rel=preload] is not supported, we must fetch the CSS manually using loadCSS
 			if (!rp.support()) {
 				rp.poly();
@@ -266,5 +324,4 @@
 	<script src="controllers/melaCtrl.js"></script>
 	<script src="controllers/contactCtrl.js"></script>-->
 </body>
-
 </html>
