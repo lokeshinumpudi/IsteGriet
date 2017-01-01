@@ -243,10 +243,11 @@
         font-size: 18px !important;
     }
     .recent-events-header {
-        padding: 2px !important;
+        padding: 2px!important;
+        top: 45px !important;
     }
     .home-events-showcase {
-        margin-top: 25px !important;
+        margin-top: 68px !important;
     }
     .hometitles .content {
         font-size: 16px !important;
@@ -401,7 +402,9 @@
 }
 
 .recent-events-header {
-    padding: 14px;
+    padding: 40px;
+    position: relative;
+    top: 19px;
 }
 
 .recent-events-header>.ui.header {
@@ -757,6 +760,7 @@
 .address-right a {
     height: 288px !important;
 }
+
 .address-right img {
     height: 288px !important;
     width: 100%;

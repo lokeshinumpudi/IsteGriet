@@ -1,12 +1,7 @@
 <div class="ui fluid container">
-
-
 	<div class="homeImage">
-
 		<div class="centerAttraction">
 			<h2>Welcome to ISTE GRIET SB</h2>
-
-
 			<h3>Our mission is to bring awareness about the developments in the field of science and technology to students.</h3>
 			<!--<div class="hometitles">
 				<div ng-class="{'active animated fadeIn':home.title1,'hide':home.hidetitle1}">
@@ -32,15 +27,17 @@
 					</div>
 				</div>
 			</div>-->
-
 		</div>
-
-
+		<div class="announcement-bar">
+			<div class="announcement-bar-slides">
+				<div class="announcement-bar-slide" ng-class="{'is-visible': announcement.active}" ng-repeat="announcement in home.announcements">
+					{{announcement.title}}
+					<a class="ui button" ng-href="announcement.link" target="_blank">Click For Details</a>
+				</div>
+				
+			</div>
+		</div>
 	</div>
-
-
-
-
 	<!--<div class="ui horizontal segments home-events">
 		<div class="ui segment ">
 			<div class="ui header">Upcoming Events!</div>
@@ -66,14 +63,12 @@
 		</div>
 
 	</div>-->
-
 	<div class="recent-events-header center">
 		<div class="ui header">Recent Events!</div>
 	</div>
 	<!--Recent events cards!!-->
 	<div class="home-events-showcase">
 		<div class="ui six stackable cards">
-
 			<a class="card" ng-class="recentEvent.color" ng-repeat="recentEvent in home.recentEvents" ng-href="{{recentEvent.event_link}}">
 				<div class="content">
 					<div class="header">{{recentEvent.title}}</div>
@@ -87,16 +82,9 @@
 					
 				</div>-->
 			</a>
-
 			<!--each card-->
 		</div>
 		<!--cards end-->
 	</div>
 	<!--Recent events cards endd!!-->
-
-
-
-
-
-
 </div>
