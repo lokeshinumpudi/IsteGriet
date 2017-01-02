@@ -686,7 +686,7 @@
 
         //return the (no) of latest events
         function getRecentEvents(no) {
-            var colors = ["teal","red","blue","yellow","violet","brown"]
+            var colors = ["teal", "red", "blue", "yellow", "violet", "brown"]
             var no = no || 6;
             var recentEvents;
             var deferred = $q.defer();
@@ -696,8 +696,6 @@
                     cleanedData.forEach(function (event) {
                         event["fulldate"] = returndate(event.year, event.month, event.day);
                         event["short_description"] = event.description.trim().split(" ", 20).join(" ");
-                        
-
                     });
                     //sort
                     cleanedData.sort(function (a, b) {
@@ -710,8 +708,7 @@
                     }); //sort end
                     // console.log(cleanedData);
                     recentEvents = cleanedData.splice(0, no);
-
-                    recentEvents.forEach(function (e,index){
+                    recentEvents.forEach(function (e, index) {
                         e.color = colors[index];
                     });
                     deferred.resolve(recentEvents);
@@ -724,6 +721,19 @@
             return deferred.promise;
         } //getRecentEvents
 
+
+        function getAnnouncements(){
+            var deferred = $q.defer();
+            
+            $http.get(fbref + 'announcements.json?orderBy="selected"&equalTo=true').then(function(res){       
+                deferred.resolve(res.data);
+            },function(err){
+                deferred.reject(err);
+            });
+
+            return deferred.promise;
+        }//getAnnouncements
+
         var service = {
             centerEvent: getCenterEvent,
             searchData: getSearchData,
@@ -733,6 +743,7 @@
             returndate: returndate,
             isWorkAlreadyDone: isWorkAlreadyDone,
             getRecentEvents: getRecentEvents,
+            getAnnouncements:getAnnouncements,
 
             allEvents: getAllEvents,
             names16: names16,

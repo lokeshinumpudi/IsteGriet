@@ -26,27 +26,29 @@
             home.recentEvents = data;
             $rootScope["dataPresent"] = true;
 
-            console.log(data);
+            // console.log(data);
         }).catch(function (err) {
 
         });
 
 
-
         //announcements logic
+        isteData.getAnnouncements().then(function (tempdata) {
+            var data = [];
+            var keys = Object.keys(tempdata);
+            keys.forEach(function (key) {
+                data.push(tempdata[key]);
+            });
+            home.announcements = data;
+            home.announcementsCount = keys.length;
+            //default all are inactive
+            makeAllInactive();
+            //first one is active by default
+            home.announcements[0].active = true;
 
-        home.announcements = [{
-            title: "Workshop on Angular.js",
-            link: ""
-
-        }, {
-            title: "Workshop on Node.js",
-            link: ""
-
-        }, {
-            title: "Workshop on JavaScript",
-            link: ""
-        }, ];
+        }).catch(function (err) {
+            console.error(err);
+        });
 
         function makeAllInactive() {
             //default all are inactive
@@ -54,10 +56,9 @@
                 anc.active = false;
             });
         }
-        makeAllInactive();
 
-        //first one is active by default
-        home.announcements[0].active = true;
+
+
 
         var index = 0;
         //every 400ms make one announcement active
@@ -66,11 +67,11 @@
             makeAllInactive();
             index++;
             //when end of loop reset counter
-            if(index >=home.announcements.length){
+            if (index >= home.announcements.length) {
                 index = 0;
             }
             //make this index active
-             home.announcements[index].active = true;
+            home.announcements[index].active = true;
         }, 3000)
 
 

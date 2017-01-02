@@ -307,9 +307,9 @@
 	</script>
 	<script type="text/javascript" src="libsmin/angular/angular.js"></script>
 	<!--Use below in production-->
-	<script  type="text/javascript" src="app.min.js"></script>
+	<!--<script  type="text/javascript" src="app.min.js"></script>-->
 	<!---->
-	<!--<script src="app.js"></script>
+	<script src="app.js"></script>
 	<script src="templatesCache/templates.js"></script>
 	<script src="services/dataService.js"></script>
 	<script src="directives/renderDescription.js"></script>
@@ -322,6 +322,6 @@
 	<script src="controllers/aboutCtrl.js">
 	</script>
 	<script src="controllers/melaCtrl.js"></script>
-	<script src="controllers/contactCtrl.js"></script>-->
+	<script src="controllers/contactCtrl.js"></script>
 </body>
 </html>

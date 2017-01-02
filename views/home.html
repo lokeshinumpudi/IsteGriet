@@ -31,11 +31,13 @@
 		<div class="announcement-bar">
 			<div class="announcement-bar-slides">
 				<div class="announcement-bar-slide" ng-class="{'is-visible': announcement.active}" ng-repeat="announcement in home.announcements">
-					{{announcement.title}}
-					<a class="ui button" ng-href="announcement.link" target="_blank">Click For Details</a>
+					{{announcement.announcement}}
+					<a class="ui button" ng-href="{{announcement.link}}" target="_blank">Click For Details</a>
 				</div>
-				
 			</div>
+			<a class="ui brown right corner label">
+				<i class="icon">{{home.announcementsCount}}</i>
+			</a>
 		</div>
 	</div>
 	<!--<div class="ui horizontal segments home-events">

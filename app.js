@@ -4,15 +4,12 @@
     angular
         .module('ISTE', ['ngRoute'])
         .config(config)
-        .run(run)
         .controller('bodyCtrl', bodyCtrl);
 
     config.$insert = ['$routeProvider', '$locationProvider'];
 
     function config($routeProvider, $locationProvider) {
-
         // Routes for our site
-
         $routeProvider.
         when('/', {
                 templateUrl: 'views/home.html',
@@ -71,13 +68,6 @@
 
 
     } //config
-
-
-    run.$inject = ['isteData'];
-
-    function run(isteData) {
-        
-    }
 
     bodyCtrl.$inject = ['$scope', '$route']
 

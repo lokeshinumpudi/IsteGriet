@@ -26,7 +26,6 @@
 
         //if cache exists dont fetch from server again
         if ($rootScope["events"].length > 5) {
-
             console.log("cache exists!");
             allevents = $rootScope["events"];
             doWork(allevents);
@@ -34,14 +33,10 @@
             eventsVm["center_event"] = [];
             eventsVm["center_event"].push(isteData.centerEvent());
             searchData = isteData.searchData();
-
         } else {
-
             // console.log($rootScope["events"].length,"rootscope");
-
             // get event data from the service
             isteData.allEvents().then(function (res) {
-
                 //clean the data received from firebase
                 var keys = Object.keys(res.data);
                 keys.forEach(function (key) {
@@ -49,10 +44,8 @@
                     allevents.push(xevent);
                 });
 
-
                 //cache the results if not already done
                 if (!$rootScope["cachedEvents"]) {
-
                     allevents.forEach(function (e) {
                         $rootScope["events"].push(e);
                     });
@@ -60,12 +53,10 @@
                     $rootScope["events"].push(isteData.centerEvent());
                 }
                 $rootScope["cachedEvents"] = true;
-
                 //fill required data
                 eventsVm["center_event"] = [];
                 eventsVm["center_event"].push(isteData.centerEvent());
                 searchData = isteData.searchData();
-
                 //call to do rest of the work;
                 doWork(allevents);
             }, function (err) {
