@@ -1,5 +1,6 @@
 <!DOCTYPE html/>
 <html lang="en" ng-app="ISTE">
+
 <head>
 	<!--<base href="/">-->
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -23,6 +24,9 @@
 	<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
 	<meta name="theme-color" content="#8B1734">
 	<style type="text/css">
+
+
+		
 		@media screen and (max-width:418px) {
 			.announcement-bar {
 				width: 90% !important;
@@ -39,12 +43,14 @@
 				width: 100% !important;
 				padding: 1em !important;
 			}
+
 			.announcement-bar-slide .button{
 				display: block !important;
 				top: 5px;
 				margin-left: initial !important;
 			}
 		}
+		
 		.announcement-bar {
 			position: absolute;
 			bottom: 0;
@@ -54,6 +60,7 @@
 			margin-left: -376px;
 			font-size: 18px;
 		}
+		
 		.announcement-bar-slides {
 			position: relative;
 			overflow: hidden;
@@ -65,6 +72,7 @@
 			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
 			box-sizing: border-box;
 		}
+		
 		.announcement-bar-slide {
 			bottom: 0;
 			box-sizing: border-box;
@@ -75,18 +83,21 @@
 			padding: 36px;
 			position: absolute;
 			right: 0;
-			-webkit-transition: all .8s;
-			transition: all .8s;
+			-webkit-transition: all .8s ease-in-out;
+			transition: all .8s ease-in-out;
 			width: 752px;
 			z-index: 1;
 		}
+		
 		.announcement-bar-slide .button {
 			position: relative;
 			margin-left: 37px ;
 		}
+		
 		.is-visible {
 			display: block !important;
 		}
+		
 		.announcement-bar-slide.is-visible {
 			z-index: 2;
 			opacity: 1;
@@ -106,6 +117,7 @@
 	</noscript>
 	<!--Defer loading-->
 </head>
+
 <body ng-controller="bodyCtrl as bodyvm">
 	<!--menu bar-->
 	<!--top menu start-->
@@ -138,6 +150,7 @@
 						<i class="search link icon"></i>
 					</div>
 				</div>
+
 			</div>-->
 		</div>
 	</div>
@@ -210,11 +223,13 @@
 					var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
 					ref = refs[refs.length - 1];
 				}
+
 				var sheets = doc.styleSheets;
 				ss.rel = "stylesheet";
 				ss.href = href;
 				// temporarily set media to something inapplicable to ensure it'll fetch without blocking render
 				ss.media = "only x";
+
 				// wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
 				function ready(cb) {
 					if (doc.body) {
@@ -243,12 +258,14 @@
 						onloadcssdefined(cb);
 					});
 				};
+
 				function loadCB() {
 					if (ss.addEventListener) {
 						ss.removeEventListener("load", loadCB);
 					}
 					ss.media = media || "all";
 				}
+
 				// once loaded, set link's media back to `all` so that the stylesheet applies once it loads
 				if (ss.addEventListener) {
 					ss.addEventListener("load", loadCB);
@@ -264,6 +281,7 @@
 				w.loadCSS = loadCSS;
 			}
 		}(typeof global !== "undefined" ? global : this));
+
 		(function (w) {
 			// rel=preload support test
 			if (!w.loadCSS) {
@@ -277,6 +295,7 @@
 					return false;
 				}
 			};
+
 			// loop preload links and fetch using loadCSS
 			rp.poly = function () {
 				var links = w.document.getElementsByTagName("link");
@@ -288,6 +307,7 @@
 					}
 				}
 			};
+
 			// if link[rel=preload] is not supported, we must fetch the CSS manually using loadCSS
 			if (!rp.support()) {
 				rp.poly();
@@ -307,9 +327,9 @@
 	</script>
 	<script type="text/javascript" src="libsmin/angular/angular.js"></script>
 	<!--Use below in production-->
-	<!--<script  type="text/javascript" src="app.min.js"></script>-->
+	<script  type="text/javascript" src="app.min.js"></script>
 	<!---->
-	<script src="app.js"></script>
+	<!--<script src="app.js"></script>
 	<script src="templatesCache/templates.js"></script>
 	<script src="services/dataService.js"></script>
 	<script src="directives/renderDescription.js"></script>
@@ -322,6 +342,7 @@
 	<script src="controllers/aboutCtrl.js">
 	</script>
 	<script src="controllers/melaCtrl.js"></script>
-	<script src="controllers/contactCtrl.js"></script>
+	<script src="controllers/contactCtrl.js"></script>-->
 </body>
+
 </html>
